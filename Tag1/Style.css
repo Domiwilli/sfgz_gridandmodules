@@ -4,11 +4,13 @@ body{
   color: black;
   background-color: red;
   margin: 4rem;
+  margin-bottom: 6rem;
 }
 
 h1{
-  font-size: 7rem;
+  font-size: 8rem;
   font-weight: bold;
+  line-height: 0.7;
   text-align: left;
   margin: 0;
 }
@@ -24,7 +26,7 @@ p{
 /*grid*/
 
 .raster div {
-      background: #E74C3C;
+      background: #red;
     }
 
     .raster {
@@ -70,6 +72,16 @@ p{
 }
 
 .h {
+  grid-column: 3 / 4;
+  grid-row: 8 / 9;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+/*
+.h {
   background-color: blue;
   display: flex;
   flex-direction: row;
@@ -79,3 +91,4 @@ p{
   flex-shrink: 0;
   flex-basis: 4;
 }
+/*
