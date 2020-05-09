@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Dark</title>
+<style>
+
+body {
+  font-family:  sans-serif;
+  font-weight: bold;
+  background-color: black;
+  text-align: center;
+  margin-top: 10rem;
+  color: white;
+}
+
+p {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 10rem;
+  padding-bottom: 10rem
+}
+
+.raster {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 100vh;
+  grid-gap: 20px;
+}
+
+.I {
+  grid-column: 1;
+}
+
+.close {
+  grid-column: 2;
+}
+
+.my {
+  grid-column: 3;
+}
+
+.eyes {
+  grid-column: 4;
+}
+
+.uebergang p {
+  font-size: 7rem;
+  color: white;
+  text-decoration: none;
+  -webkit-transition: all 5s ease;
+  transition: all 5s ease;
+}
+
+.uebergang:hover p {
+  font-size: 0rem;
+  color: black;
+}
+
+.uebergang :nth-child(2) {
+  -webkit-transition-delay:  5s;
+  transition-delay:  5s;
+}
+
+.uebergang :nth-child(3) {
+  -webkit-transition: all 5s ease;
+  transition: all 5s ease;
+}
+
+.uebergang :nth-child(4) {
+  -webkit-transition-delay:  5s;
+  transition-delay:  5s;
+}
+ /*
+.uebergang:hover .close {
+  font-size: 0rem;
+  color: black;
+}
+
+.uebergang:hover .my {
+  font-size: 0rem;
+  color: black;
+  -webkit-transition-delay:  1s;
+  transition-delay: 1s;
+}
+
+.uebergang:hover:nth-child .eyes {
+  font-size: 0rem;
+  color: black;
+  -webkit-transition-delay:  1s;
+  transition-delay: 1s;
+}
+/*
+.uebergang :nth-child(2) {
+  -webkit-transition-timing-function:  ease;
+  transition-timing-function: ease;
+}
+
+.uebergang :nth-child(3) {
+  -webkit-transition-delay:  1s;
+  transition-delay: 1s;
+}
+
+.uebergang :nth-child(4) {
+  -webkit-transition-delay:  1s;
+  transition-delay: 1s;
+}
+*/
+</style>
+
+</head>
+
+<div class="uebergang">
+<div class="raster">
+    <div class="I">
+    <p>I</p>
+    </div>
+  <div class="close">
+    <p>close</p>
+    </div>
+  <div class="my">
+    <p>my</p>
+  </div>
+  <div class="eyes">
+    <p>eyes</p>
+  </div>
+</div>
+</div>
+
+</body>
+</html>
