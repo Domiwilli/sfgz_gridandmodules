@@ -1,43 +1,24 @@
 
 body{
   font-family: 'Roboto', sans-serif;
-  color: black;
-  background-color: red;
-  margin: 4rem;
-  margin-bottom: 6rem;
+  font-size: 5rem;
+  color: #2C3D55;
+  background-color: white;
+  margin: 5rem;
+  align-content: center;
+  justify-content: center;
 }
 
-h1{
-  font-size: 8rem;
-  font-weight: bold;
-  line-height: 0.7;
-  text-align: left;
-  margin: 0;
-}
-
-p{
-  font-size: 2rem;
-  font-weight: normal;
-  line-height: 1.5;
-  text-align: left;
-  margin: 0;
-}
 
 /*grid*/
 
-body {
-  font: 150% sans-serif;
-  color: white;
-  background: black;
-  text-align: center;
-}
+
 
 .raster > * {
-  background: black;
-  border: 1px white solid;
+  background: white;
+  border: 5px #2C3D55 solid;
   padding: 20px;
   text-align: center;
-  font-size: 2em;
 }
 
 .raster {
@@ -50,20 +31,26 @@ body {
 
 @media screen and (max-width: 48em){
 body{
-background-color: blue;
+background-color: #2C3D55;
+color: white;
 }
 
-.e {
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
+.raster > * {
+  background: #2C3D55;
+  border: 5px white solid;
 }
 
-.a {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
+.f {
+  grid-column: 1 ;
+  grid-row: 1 ;
 }
 
-.n {
-  grid-column: 3 / 4;
-  grid-row: 2 / 3;
+.r {
+  grid-column: 3 ;
+  grid-row: 1 ;
+}
+
+.i {
+  grid-column: 1 ;
+  grid-row: 2 ;
 }
