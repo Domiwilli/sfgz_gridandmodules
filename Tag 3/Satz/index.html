@@ -2,16 +2,15 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>Dark</title>
+<title>I close my eyes</title>
 <style>
 
 body {
   font-family:  sans-serif;
   font-weight: bold;
-  background-color: black;
+  font-size: 3rem;
+  background-color: #DB5375;
   text-align: center;
-  margin-top: 10rem;
-  color: white;
 }
 
 p {
@@ -23,109 +22,64 @@ p {
 
 .raster {
   display: grid;
-  align-items: center;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 100vh;
   grid-gap: 20px;
+  align-items: center;
 }
 
-.I {
-  grid-column: 1;
-}
-
-.close {
-  grid-column: 2;
-}
-
-.my {
-  grid-column: 3;
-}
-
-.eyes {
-  grid-column: 4;
-}
-
-.uebergang p {
+.raster p {
   font-size: 7rem;
   color: white;
   text-decoration: none;
-  -webkit-transition: all 5s ease;
-  transition: all 5s ease;
+  -webkit-transition: all 3s ease;
+  transition: all 3s ease;
 }
 
-.uebergang:hover p {
+.raster:hover p {
   font-size: 0rem;
-  color: black;
+  color: #DB5375;
 }
 
-.uebergang :nth-child(2) {
-  -webkit-transition-delay:  5s;
-  transition-delay:  5s;
+
+.raster :nth-child(2) {
+  transition-timing-function:  ease-in-out;
 }
 
-.uebergang :nth-child(3) {
-  -webkit-transition: all 5s ease;
-  transition: all 5s ease;
+.raster :nth-child(3) {
+  transition-timing-function:  ease-out;
 }
 
-.uebergang :nth-child(4) {
-  -webkit-transition-delay:  5s;
-  transition-delay:  5s;
-}
- /*
-.uebergang:hover .close {
-  font-size: 0rem;
-  color: black;
+.raster :nth-child(4) {
+  transition-timing-function:  ease-in;
 }
 
-.uebergang:hover .my {
-  font-size: 0rem;
-  color: black;
-  -webkit-transition-delay:  1s;
-  transition-delay: 1s;
+.raster:hover :nth-child(1) {
+  transform: translate(-300px, 0);
 }
 
-.uebergang:hover:nth-child .eyes {
-  font-size: 0rem;
-  color: black;
-  -webkit-transition-delay:  1s;
-  transition-delay: 1s;
-}
-/*
-.uebergang :nth-child(2) {
-  -webkit-transition-timing-function:  ease;
-  transition-timing-function: ease;
+.raster:hover :nth-child(2) {
+  transform: translate(0px, 50px);
 }
 
-.uebergang :nth-child(3) {
-  -webkit-transition-delay:  1s;
-  transition-delay: 1s;
+.raster:hover :nth-child(2) {
+  transform: translate(0px, -50px);
 }
 
-.uebergang :nth-child(4) {
-  -webkit-transition-delay:  1s;
-  transition-delay: 1s;
+.raster:hover :nth-child(4) {
+  transform: translate(300px, 0px);
 }
-*/
+
+
 </style>
-
 </head>
 
-<div class="uebergang">
+<body>
 <div class="raster">
-    <div class="I">
     <p>I</p>
-    </div>
-  <div class="close">
     <p>close</p>
-    </div>
-  <div class="my">
     <p>my</p>
-  </div>
-  <div class="eyes">
     <p>eyes</p>
-  </div>
-</div>
 </div>
 
 </body>
