@@ -2,38 +2,40 @@
 <html>
 <head>
 <meta charset="utf-8" />
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+
 <title>Dark</title>
 <style>
 
 body {
-  font-family:  sans-serif;
-  font-weight: bold;
+  font-family: 'Abril Fatface';
   background-color: black;
-  text-align: center;
-  margin-top: 10rem;
+  text-align: left;
   color: white;
 }
 
-p {
-  padding: 20rem;
+.raster {
+  display: grid;
+  grid-template-rows: auto;
+  width: 100%;
+  height: 100rem;
 }
 
-.uebergang {
+#uebergang {
   font-size: 7rem;
   color: white;
-  margin-top: 10rem;
-  margin-left: 10rem;
   text-decoration: none;
   -webkit-transition: all 5s ease;
   transition: all 5s ease;
 }
 
-.uebergang:hover {
-  font-size: 0rem;
-  color: black;
-  margin-top: 30rem;
-  margin-left: 30rem;
+#uebergang:hover {
+  font-size: 50rem;
+  opacity: 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
+
 
 </style>
 
@@ -41,10 +43,9 @@ p {
 
 
 <body>
-<div class="uebergang">
-  <p>DARK</p>
+  <div class="raster">
+<div id="uebergang">dark</div>
 </div>
-
 
 </body>
 </html>
