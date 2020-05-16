@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <title>responsive</title>
+  <style>
+
+
+  body > * {
+    margin: 0;
+    padding: 2rem;
+  }
+
+    body {
+      font-family: 'Anton', sans-serif;
+      font-size: 5rem;
+      background: black;
+      display: grid;
+      grid-template-areas:
+      "the the the"
+      "w o ."
+      ". r l"
+      ". . d";
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-gap: 2rem;
+
+    }
+
+
+
+    .the {
+      background: #FFFFCB;
+      grid-area: the;
+    }
+
+    .w {
+      background: #74bec7;
+      font-size: 3rem;
+      grid-area: w;
+    }
+
+    .o {
+      background: #c9ffd5;
+      font-size: 3rem;
+      grid-area: o;
+    }
+
+    .r {
+      background: #2C858D;
+      font-size: 12rem;
+      writing-mode: sideways-lr;
+      grid-area: r;
+    }
+
+    .l {
+      background: #004056;
+      color: #FFFFCB;
+      font-size: 2rem;
+      grid-area: l;
+    }
+
+    .d {
+      background: #004056;
+      color: #FFFFCB;
+      font-size: 2rem;
+      grid-area: d;
+    }
+
+    @media all and (max-width: 50em) {
+      body {
+        grid-template-areas:
+        "the w"
+        "o r"
+        "o r"
+        "l d";
+        grid-template-columns: 1fr 2fr;
+      }
+
+      .the {
+        grid-area: the;
+      }
+
+      .w {
+        background: #74bec7;
+        font-size: 5rem;
+        grid-area: w;
+      }
+
+      .o {
+        background: #c9ffd5;
+        font-size: 7rem;
+        grid-area: o;
+      }
+
+      .r {
+        background: #2C858D;
+        font-size: 6rem;
+        writing-mode: horizontal-tb;
+        grid-area: r;
+      }
+
+      .l {
+        background: #004056;
+        color: #FFFFCB;
+        font-size: 5rem;
+        writing-mode: sideways-lr;
+        grid-area: l;
+      }
+
+      .d {
+        background: #004056;
+        color: #FFFFCB;
+        font-size: 5rem;
+        grid-area: d;
+      }
+
+    }
+/*
+    @media all and (max-width: 30em) {
+      body {
+        font-size: 5rem;
+        display: block;
+}
+    .r {
+      writing-mode: horizontal-tb;
+}
+    .l {
+      writing-mode: horizontal-tb;
+      }
+
+
+    }
+*/
+
+
+  </style>
+</head>
+
+<body>
+<p class="the">THE</p>
+<p class="w">W</p>
+<p class="o">O</p>
+<p class="r">R</p>
+<p class="l">L</p>
+<p class="d">D</p>
+
+
+
+
+</html>
