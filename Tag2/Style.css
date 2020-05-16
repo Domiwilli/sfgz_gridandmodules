@@ -1,0 +1,56 @@
+
+body{
+  font-family: 'Roboto', sans-serif;
+  font-size: 5rem;
+  color: #2C3D55;
+  background-color: white;
+  margin: 5rem;
+  align-content: center;
+  justify-content: center;
+}
+
+
+/*grid*/
+
+
+
+.raster > * {
+  background: white;
+  border: 5px #2C3D55 solid;
+  padding: 20px;
+  text-align: center;
+}
+
+.raster {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 20px;
+}
+
+@media screen and (max-width: 48em){
+body{
+background-color: #2C3D55;
+color: white;
+}
+
+.raster > * {
+  background: #2C3D55;
+  border: 5px white solid;
+}
+
+.f {
+  grid-column: 1 ;
+  grid-row: 1 ;
+}
+
+.r {
+  grid-column: 3 ;
+  grid-row: 1 ;
+}
+
+.i {
+  grid-column: 1 ;
+  grid-row: 2 ;
+}
