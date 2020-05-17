@@ -4,19 +4,58 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Style.css">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <!-- page content -->
 
 <body>
+<style>
 
+body {
+  background-color: #9FB7B9;
+  color: white;
+  font-family: 'Jost', serif;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 1fr 2fr;
+
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem;
+  line-height: 1;
+}
+
+ul {
+  font-size: 1.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.Header {
+  grid-column-start: 2;
+}
+
+.List {
+  grid-column-start: 2;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+</style>
   <title>Grid & Modules</title>
   </head>
   <body>
-    <h1>Grid & Modules</h1>
 
+    <h1 class="Header">Grid & <br> Modules</h1>
+
+<div class="List">
     <ul>
       <li><a href="https://domiwilli.github.io/sfgz_gridandmodules/Tag1/Brockmann.html">Tag 1</a></li>
       <li><a href="https://domiwilli.github.io/sfgz_gridandmodules/Tag2/Anagramm.html">Tag 2</a></li>
@@ -27,7 +66,6 @@
     </ul>
 
   </div>
-</div>
 
 </body>
 </html>
