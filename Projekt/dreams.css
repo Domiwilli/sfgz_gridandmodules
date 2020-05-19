@@ -1,0 +1,28 @@
+
+body {
+  font-family: 'Arvo', serif;
+  font-weight: normal;
+  color: white;
+  margin: auto;
+  background: rgb(2,0,36);
+  background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(26,26,28,1) 35%, rgba(255,255,255,1) 100%);
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+
+.close > * {
+  padding: 0;
+  line-height: 0rem;
+  text-align: center;
+}
+
+.close {
+  display: grid;
+  grid-template-rows: minmax(20vh, auto);
+  margin-top: 5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
