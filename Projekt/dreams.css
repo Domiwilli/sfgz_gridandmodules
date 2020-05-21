@@ -2,27 +2,232 @@
 body {
   font-family: 'Arvo', serif;
   font-weight: normal;
-  color: white;
   margin: auto;
-  background: rgb(2,0,36);
-  background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(26,26,28,1) 35%, rgba(255,255,255,1) 100%);
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 6rem;
 }
 
 
-.close > * {
-  padding: 0;
-  line-height: 0rem;
-  text-align: center;
-}
+/* I close my Eyes */
 
 .close {
   display: grid;
-  grid-template-rows: minmax(20vh, auto);
-  margin-top: 5rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+.close_raster > * {
+  padding: 0;
+}
+
+.close_raster {
+  display: grid;
+  grid-template-columns: 20vw 1fr 20vw;
+  margin-top: 20rem;
+  margin-bottom: 5rem;
+}
+
+.center {
+  grid-column-start: 2;
+  line-height: 0;
+}
+
+/* And I can see */
+
+.cansee {
+  display: grid;
+  background: black;
+  background: linear-gradient(180deg, black 0%, white 100%);
+}
+
+.cansee_raster > * {
+
+}
+
+.cansee_raster {
+  margin-top: 10rem;
+  display: grid;
+  font-size: 4rem;
+  padding: 0;
+  line-height: 0;
+  grid-template-columns: 20vw repeat(6, 1fr) 20vw;
+
+}
+
+.and1 {
+  grid-column: 2;
+  writing-mode: sideways-rl;
+}
+
+.and2 {
+  grid-column: 3;
+  writing-mode: sideways-rl;
+}
+
+.and3 {
+  grid-column: 4;
+  writing-mode: sideways-rl;
+}
+
+.and4 {
+  grid-column: 5;
+  writing-mode: sideways-rl;
+}
+
+.and5 {
+  grid-column: 6;
+  writing-mode: sideways-rl;
+}
+
+.and6 {
+  grid-column: 7;
+  writing-mode: sideways-rl;
+}
+
+/* The World */
+
+/*
+.world_raster {
+  margin-top: 10rem;
+  color: black;
+  display: grid;
+  padding: 0;
+  grid-template-areas:
+  ". the . . ."
+  ". w o . ."
+  ". . r l ."
+  ". . r d .";
+  grid-template-columns: 25vw 1fr 1fr 0.5fr 25vw;
+  grid-template-rows: 5vh 20vh 30vh 30vh;
+  grid-auto-flow: row;
+}
+
+*/
+
+.world_raster > * {
+
+}
+
+.world_raster {
+  margin-top: 10rem;
+  color: black;
+  display: grid;
+  padding: 0;
+  grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
+  grid-template-rows: 30vh 30vh 30vh 30vh;
+
+}
+
+.the {
+  grid-row: 1;
+  grid-column: 2;
+  font-size: 6rem;
+  line-height: 0;
+}
+
+.w {
+  grid-row: 2;
+  grid-column: 2;
+  font-size: 18rem;
+  line-height: 0;
+  margin-top: 8vh;
+}
+
+.o {
+  grid-row: 2;
+  grid-column: 3;
+  font-size: 15rem;
+  line-height: 0;
+  margin-top: 22vh;
+  margin-left: 2vw;
+}
+
+.r {
+  grid-row: 3;
+  grid-column: 2 / 4;
+  font-size: 30rem;
+  text-align: center;
+  line-height: 0;
+  margin-top: 22vh;
+  margin-left: -10vw;
+}
+
+.l {
+  grid-row: 3;
+  grid-column: 3 / 4;
+  font-size: 20rem;
+  line-height: 0;
+  writing-mode: sideways-lr;
+  margin-bottom: 2vw;
+  margin-left: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.d {
+  grid-row: 4;
+  grid-column: 3 / 4;
+  font-size: 15rem;
+  line-height: 0;
+  margin-top: 13vh;
+  margin-left: 6vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+/* That's wating up for me */
+
+.waiting {
+}
+
+.wating_raster > * {
+}
+
+.wating_raster {
+  font-size: 4rem;
+  display: grid;
+  grid-template-rows: 100vh 100vh 100vh 100vh;
+  color: black;
+  text-align: center;
+  margin-top: 20rem;
+}
+
+/*Through the dark, through the Door*/
+
+.dark {
+  background-color: black;
+  padding-top: 50rem;
+}
+
+.dark_raster > * {
+}
+
+.dark_raster {
+  font-size: 4rem;
+  display: grid;
+  grid-template-rows: 20vh 20vh 100vh;
+  color: white;
+  text-align: center;
+  margin-top: 20rem;
+}
+
+.dark_left {
+  text-align: left;
+}
+
+.dark_right {
+  text-align: right;
+}
+
+.door {
+  font-size: 30rem;
+  line-height: 0;
+  margin-top: 20rem;
 }
