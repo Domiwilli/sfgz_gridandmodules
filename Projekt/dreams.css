@@ -1,6 +1,6 @@
 
 body {
-  font-family: 'Arvo', serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-weight: normal;
   margin: auto;
 }
@@ -25,14 +25,14 @@ h1 {
 
 .close_raster {
   display: grid;
-  grid-template-columns: 20vw 1fr 20vw;
+  grid-template-columns: 0.2fr 1fr 1fr 0.2fr;
+  grid-auto-rows: min-content;
   margin-top: 20rem;
   margin-bottom: 5rem;
 }
 
 .center {
-  grid-column-start: 2;
-  line-height: 0;
+  grid-column: 2 / 4;
 }
 
 /* And I can see */
@@ -53,38 +53,49 @@ h1 {
   font-size: 4rem;
   padding: 0;
   line-height: 0;
-  grid-template-columns: 20vw repeat(6, 1fr) 20vw;
-
+  grid-template-columns: 0.2fr repeat(6, 0.25fr) 0.2fr;
 }
 
 .and1 {
   grid-column: 2;
   writing-mode: sideways-rl;
+  display: flex;
+  align-items: center;
 }
 
 .and2 {
   grid-column: 3;
   writing-mode: sideways-rl;
+  display: flex;
+  align-items: center;
 }
 
 .and3 {
   grid-column: 4;
   writing-mode: sideways-rl;
+  display: flex;
+  align-items: center;
 }
 
 .and4 {
   grid-column: 5;
   writing-mode: sideways-rl;
+  display: flex;
+  align-items: center;
 }
 
 .and5 {
   grid-column: 6;
   writing-mode: sideways-rl;
+  display: flex;
+  align-items: center;
 }
 
 .and6 {
   grid-column: 7;
   writing-mode: sideways-rl;
+  display: flex;
+  align-items: center;
 }
 
 /* The World */
@@ -112,52 +123,59 @@ h1 {
 }
 
 .world_raster {
-  margin-top: 10rem;
-  color: black;
   display: grid;
-  padding: 0;
-  grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
-  grid-template-rows: 30vh 30vh 30vh 30vh;
-
+  grid-template-areas:
+  ". the . . . ."
+  ". . w o . ."
+  ". . r l . ."
+  ". . . . d .";
+  grid-template-columns: 0.2fr 1fr 1fr 1fr 1fr 0.2fr;
+  grid-auto-rows: min-content;
+  margin-top: 20rem;
+  margin-bottom: 5rem;
 }
 
 .the {
   grid-row: 1;
-  grid-column: 2;
+  grid-column: 2 / 3;
   font-size: 6rem;
   line-height: 0;
+  grid-area: the;
 }
 
 .w {
   grid-row: 2;
-  grid-column: 2;
+  grid-column: 3 / 4;
   font-size: 18rem;
   line-height: 0;
   margin-top: 8vh;
+  grid-area: w;
 }
 
 .o {
   grid-row: 2;
-  grid-column: 3;
+  grid-column: 4 / 5;
   font-size: 15rem;
   line-height: 0;
   margin-top: 22vh;
   margin-left: 2vw;
+  grid-area: o;
 }
 
 .r {
   grid-row: 3;
-  grid-column: 2 / 4;
+  grid-column: 3 / 4;
   font-size: 30rem;
   text-align: center;
   line-height: 0;
   margin-top: 22vh;
   margin-left: -10vw;
+  grid-area: r;
 }
 
 .l {
   grid-row: 3;
-  grid-column: 3 / 4;
+  grid-column: 4 / 5;
   font-size: 20rem;
   line-height: 0;
   writing-mode: sideways-lr;
@@ -167,20 +185,17 @@ h1 {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
+  grid-area: l;
 }
 
 .d {
   grid-row: 4;
-  grid-column: 3 / 4;
+  grid-column: 5 / 6;
   font-size: 15rem;
-  line-height: 0;
-  margin-top: 13vh;
-  margin-left: 6vw;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-end;
+  grid-area: d;
 }
+
+
 
 /* That's wating up for me */
 
@@ -192,63 +207,15 @@ h1 {
 
 .wating_raster {
   font-size: 4rem;
+  font-weight: 700;
   display: grid;
-  grid-template-columns: 100vw;
+  grid-template-columns: 1fr;
   grid-template-rows: repeat(4, minmax(800px, 1fr));
   color: black;
   text-align: center;
   margin-top: 20rem;
 }
 
-/* With things from far away */
-
-.things {
-}
-
-.things_raster > * {
-}
-
-.things_raster {
-  font-size: 4rem;
-  display: grid;
-  grid-template-columns: repeat(7, minmax(50px, 1fr));
-  grid-template-rows: minmax(50px, 1fr);
-  color: black;
-  text-align: center;
-  margin-bottom: 20rem;
-}
-
-.with {
-  grid-column: 2;
-  font-size: 10rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.things {
-  grid-column: 3;
-  font-size: 7rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.from {
-  grid-column: 5;
-  font-size: 4rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.far {
-  grid-column: 6;
-  font-size: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
 
 /*Through the dark, through the Door*/
 
@@ -262,25 +229,391 @@ h1 {
 
 .dark_raster {
   display: grid;
-  grid-template-columns: 100vw;
-  grid-template-rows: 20vh 20vh 100vh;
+  grid-template-columns: 0.2fr 1fr 1fr 0.2fr;
+  grid-auto-rows: min-content;
   color: white;
   text-align: center;
   margin-top: 20rem;
 }
 
 .dark_left {
+  grid-column: 1 / 5;
+  grid-row: 1 / 2;
   font-size: 6rem;
   text-align: left;
 }
 
 .dark_right {
+  grid-column: 1 / 5;
+  grid-row: 2 / 3;
   font-size: 6rem;
   text-align: right;
 }
 
-.door {
-  font-size: 30rem;
-  line-height: 0;
+.do {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  font-size: 20rem;
+  text-align: right;
+}
+
+.or {
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+  font-size: 20rem;
+  text-align: left;
+}
+
+/*Through where no one's been before*/
+
+.noone {
+
+}
+
+.noone_raster > * {
+}
+
+.noone_raster {
+  display: grid;
+  grid-template-columns: 0.2fr 1fr 1fr 1fr 1fr 0.2fr;
+  grid-auto-rows: min-content;
+  color: black;
+}
+
+.through {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  font-size: 3rem;
+  text-align: left;
+  padding-top: 10rem;
+}
+
+.where {
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
+  font-size: 3rem;
+  text-align: left;
+  padding-bottom: 5rem;
+}
+
+.no {
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+  font-size: 3rem;
+  writing-mode: sideways-rl;
+  display: flex;
+  text-align: left;
+}
+
+.ones {
+  grid-column: 4 / 5;
+  grid-row: 4 / 5;
+  font-size: 3rem;
+  text-align: right;
+  padding-top: 3rem;
+}
+
+.been {
+  grid-column: 5 / 6;
+  grid-row: 5 / 6;
+  font-size: 3rem;
+  writing-mode: sideways-rl;
+  display: flex;
+  text-align: left;
+}
+
+.before {
+  grid-column: 3 / 4;
+  grid-row: 6 / 7;
+  font-size: 3rem;
+  text-align: left;
+}
+
+.dreams1 {
+  grid-column: 3 / 4;
+  grid-row: 7 / 8;
+  font-size: 3rem;
+  text-align: right;
+  color: #525B76;
+}
+
+.dreams2 {
+  grid-column: 4 / 5;
+  grid-row: 8 / 9;
+  font-size: 3rem;
+  text-align: left;
+  color: #1F5673;
+}
+
+.dreams3 {
+  grid-column: 3 / 4;
+  grid-row: 9 / 10;
+  font-size: 3rem;
+  text-align: left;
+  color: #759FBC;
+}
+
+.dreams4 {
+  grid-column: 3 / 4;
+  grid-row: 10 / 11;
+  font-size: 3rem;
+  text-align: right;
+  color: #90C3C8;
+}
+
+.dreams5 {
+  grid-column: 2 / 3;
+  grid-row: 11 / 12;
+  font-size: 3rem;
+  text-align: right;
+  color: #B5D6D6;
+}
+
+
+/*A Million Dreams*/
+.dreams {
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(39,222,226,1) 18%, rgba(11,27,97,1) 38%, rgba(217,29,205,1) 62%, rgba(233,184,27,1) 81%);
+  padding-top: 10rem;
+}
+
+.dreams_raster  > *{
+}
+/*
+.dreams_raster > * {
+}
+
+.dreams_raster {
+  display: grid;
+  grid-template-columns: 0.2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.2fr;
+  grid-auto-rows: min-content;
+  color: black;
+}
+*/
+.dreams_raster div {
+    font-size: 3rem;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.dreams_raster {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 0.2fr repeat(5, 1fr) 0.2fr;
+  grid-auto-rows: min-content;
+  text-align: center;
+  color: white;
+}
+
+.animation_left{
+    animation-name: bewegen_li;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+.animation_left_fast{
+    animation-name: bewegen_li_fa;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+.animation_right{
+    animation-name: bewegen_re;
+    transform-origin: 2s;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+
+}
+
+.animation_right_fast{
+    animation-name: bewegen_re_fa;
+    transform-origin: 4s;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+
+}
+
+.animation_middle{
+    animation-name: bewegen_mi;
+    transform-origin: 6s;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+@keyframes bewegen_li {
+0% {
+left: 0;
+opacity: 100%;
+font-size: 3rem;
+}
+
+50% {
+opacity: 50%;
+}
+
+100% {
+left: 20px;
+opacity: 100%;
+font-size: 3.3rem;
+}
+}
+
+@keyframes bewegen_li_fa {
+0% {
+left: 40px;
+font-size: 3.3rem;
+}
+
+100% {
+left: 0;
+font-size: 2.9rem;
+}
+}
+
+@keyframes bewegen_re {
+0% {
+opacity: 100%;
+font-size: 3rem;
+}
+
+30% {
+opacity: 0%;
+}
+
+100% {
+opacity: 100%;
+font-size: 2.7rem;
+}
+}
+
+@keyframes bewegen_re_fa {
+0% {
+right: 30px;
+}
+
+100% {
+right: 10px;
+}
+}
+
+@keyframes bewegen_mi {
+0% {
+opacity: 0%;
+right: 0;
+}
+
+100% {
+opacity: 50%;
+right: 30px;
+}
+}
+
+/*Through where no one's been before*/
+
+.fin {
+
+}
+
+.fin_raster > * {
+}
+
+.fin_raster {
+  display: grid;
+  grid-template-columns: 0.2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.2fr;
+  grid-auto-rows: min-content;
+  color: white;
+}
+
+.fin1 {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+  font-size: 3rem;
+  text-align: left;
+}
+
+.fin2 {
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
+  font-size: 2rem;
+  text-align: left;
+  padding-bottom: 5rem;
+}
+
+.fin3 {
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+  font-size: 3rem;
+  text-align: left;
+}
+
+.fin4 {
+  grid-column: 4 / 5;
+  grid-row: 4 / 5;
+  font-size: 3rem;
+  text-align: right;
+  padding-top: 3rem;
+}
+
+.fin5 {
+  grid-column: 5 / 6;
+  grid-row: 5 / 6;
+  font-size: 4rem;
+  text-align: left;
+}
+
+.fin6 {
+  grid-column: 4 / 5;
+  grid-row: 6 / 7;
+  font-size: 2rem;
+  text-align: left;
+}
+
+.fin7 {
+  grid-column: 3 / 4;
+  grid-row: 8 / 9;
+  font-size: 3rem;
+  text-align: left;
+}
+
+.fin8 {
+  grid-column: 4 / 5;
+  grid-row: 9 / 10;
+  font-size: 2.5rem;
+  text-align: left;
+}
+
+.fin9 {
+  grid-column: 3 / 4;
+  grid-row: 10 / 11;
+  font-size: 2rem;
+  text-align: left;
+  padding-bottom: 20rem;
+}
+
+/*That's all it takes*/
+
+.all {
+}
+
+.all_raster > * {
+}
+
+.all_raster {
+  font-size: 4rem;
+  font-weight: 700;
+  display: grid;
+  grid-template-columns: 1fr;
+  color: white;
+  text-align: center;
   margin-top: 20rem;
 }
