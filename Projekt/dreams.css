@@ -375,6 +375,8 @@ h1 {
   background: rgb(255,255,255);
   background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(39,222,226,1) 18%, rgba(11,27,97,1) 38%, rgba(217,29,205,1) 62%, rgba(233,184,27,1) 81%);
   padding-top: 10rem;
+  width:100vw;
+  overflow:hidden;
 }
 
 .dreams_raster  > *{
