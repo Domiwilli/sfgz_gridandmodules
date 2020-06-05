@@ -3,28 +3,42 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="dreams.css"/>
-  <link rel="stylesheet" href="dreams.scss"/>
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,700;1,200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+
   <title>Dreams</title>
 </head>
 
 <!---I close my Eyes--->
-
 <div class="close">
-  <div class="close_raster">
-    <h1 class="center">I CLOSE MY EYES</h1>
-    <h1 class="center">I CLOSE MY EYES</h1>
-    <h1 class="center">I CLOSE MY EYES</h1>
-    <h1 class="center">I CLOSE MY EYES</h1>
-    <h1 class="center">I CLOSE MY EYES</h1>
-    <h1 class="center">I CLOSE MY EYES</h1>
-  </div>
+    <div class="close_raster">
+      <h1 class="animate__animated animate__fadeOutDown">I CLOSE MY EYES</h1>
+      <h1 class="animate__animated animate__fadeOutDown animate__delay-1s">I CLOSE MY EYES</h1>
+      <h1 class="animate__animated animate__fadeOutDown animate__delay-2s">I CLOSE MY EYES</h1>
+      <h1 class="animate__animated animate__fadeOutDown animate__delay-3s">I CLOSE MY EYES</h1>
+      <h1 class="animate__animated animate__fadeOutDown animate__delay-4s">I CLOSE MY EYES</h1>
+      <h1 class="animate__animated animate__fadeOutDown animate__delay-5s"></h1>
+    </div>
 </div>
 
 
 <!---And I can see--->
+
+<div class="cansee">
+  <div class="cansee_raster">
+    <div class="and animation checkview">AND</div>
+    <div class="i animation checkview">I</div>
+    <div class="can animation checkview">CAN</div>
+    <div class="see1 animation checkview">SEE</div>
+    <div class="see2 animation checkview">SEE</div>
+    <div class="see3 animation checkview">SEE</div>
+  </div>
+</div>
+
+
+
+<!---And I can see
 
 <div class="cansee">
   <div class="cansee_raster">
@@ -36,7 +50,7 @@
     <p class="and6">AND I CAN SEE</P>
   </div>
 </div>
-
+--->
 
 <!---The world--->
 
@@ -478,4 +492,5 @@
     </div>
 
 <body>
+  <script src="viewport.js" ></script>
 </html>
