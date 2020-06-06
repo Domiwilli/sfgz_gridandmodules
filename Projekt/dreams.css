@@ -175,6 +175,7 @@ h1 {
 .and {
   font-size: 4rem;
   grid-area: and;
+  opacity:0;
 }
 
 .i {
