@@ -595,7 +595,7 @@ opacity: 90%;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, minmax(800px, 1fr));
-  color: black;
+  color: #141E30;
   text-align: center;
   margin-top: 20rem;
   font-weight: 700;
@@ -621,7 +621,7 @@ opacity: 90%;
   "dark_left3 dark_left3 dark_left3 dark_left3"
   "dark_left4 dark_left4 dark_left4 dark_left4";
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-auto-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
+  grid-template-rows: min-content;
   margin-top: 20rem;
 }
 
@@ -632,6 +632,7 @@ opacity: 90%;
   color: black;
   position: absolute;
   right: 0;
+  line-height: 0;
   }
 
 .vonlinks1.isinview {
@@ -660,16 +661,18 @@ right: 0;
   text-align: center;
   position: relative;
   align-items: center;
-
+  margin-top: 10rem;
+  padding: 0;
+  line-height: 0;
 }
 
-.vonlinks2.isinview {
+.vonlinks2.isinview.checkview {
     animation-name: floatdark;
     transform-origin: 6s;
     animation-duration: 4s;
     animation-iteration-count: 1;
-    animation-direction: linear;
-    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
     animation-fill-mode: forwards; 
 }
 
@@ -679,8 +682,6 @@ opacity: 0;
 letter-spacing: 1rem;
 font-size: 10rem;
 background: #141E30;
-padding: 0;
-margin: 0;
 }
 
 35% {
@@ -688,17 +689,13 @@ margin: 0;
   letter-spacing: 1rem;
   font-size: 20rem;
   background: #141E30;
-  padding: 0;
-  margin: 0;
 }
 
 75% {
   opacity: 100%;
   letter-spacing: 7rem;
   font-size: 20rem;
-  background: #141E30;
-  padding: 0;
-  margin: 0;
+  background: black;
 }
 
 100% {
@@ -706,11 +703,8 @@ margin: 0;
   letter-spacing: 7rem;
   font-size: 20rem;
   background: black;
-  padding: 0;
-  margin: 0;
 }
 }
-
 
 .dark_left3 {
   grid-area: dark_left3;
@@ -855,7 +849,7 @@ left: 0;
   display: grid;
   grid-template-columns: 0.2fr 1fr 1fr 1fr 1fr 0.2fr;
   grid-auto-rows: min-content;
-  color: black;
+  color: #141E30;
 }
 
 .through {
@@ -1180,12 +1174,16 @@ right: 30px;
   grid-row: 10 / 11;
   font-size: 2rem;
   text-align: left;
-  padding-bottom: 20rem;
+  margin-bottom: 20rem;
 }
 
 /*That's all it takes*/
 
 .all {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  background: rgba(233,184,27,1);
 }
 
 .all_raster > * {
@@ -1196,7 +1194,45 @@ right: 30px;
   font-weight: 700;
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   color: white;
   text-align: center;
-  margin-top: 20rem;
+
+}
+
+
+/*Impressum*/
+
+h3 {
+  line-height: 1;
+}
+
+.impressum {
+  font-size: 1.3rem;
+  line-height: 1.2;
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+}
+
+.impressum_raster > * {
+}
+
+.impressum_raster {
+  display: grid;
+  grid-template-areas:
+  ". about . name .";
+  grid-template-columns: 0.5fr 1.5fr 0.2fr 1fr 0.5fr;
+  grid-template-rows: 1fr;
+  color: #141E30;
+  background: white;
+}
+
+.about {
+  grid-area: about;
+
+}
+
+.name {
+  grid-area: name;
+
 }
