@@ -603,40 +603,37 @@ opacity: 90%;
 }
 
 
-/*Through the dark, through the …*/
+/*Through the… */
 
-.dark {
+.through {
   background-color: #141E30;
-  padding-top: 50rem;
+  padding-top: 30rem;
+  padding-bottom: 15rem;
 }
 
-.dark_raster > * {
+.through_raster > * {
 }
 
-.dark_raster {
+.through_raster {
   display: grid;
   grid-template-areas:
-  "dark_left1 dark_left1 dark_left1 dark_left1"
-  "dark_left2 dark_left2 dark_left2 dark_left2"
-  "dark_left3 dark_left3 dark_left3 dark_left3"
-  "dark_left4 dark_left4 dark_left4 dark_left4";
+  ". bla1 bla2 .";
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: min-content;
-  margin-top: 20rem;
+  grid-template-rows: 1fr;
+  margin-top: 10rem;
 }
 
-.dark_left1 {
-  grid-area: dark_left1;
+.through1 {
+  grid-area: bla1;
   font-size: 6rem;
-  text-align: right;
-  color: black;
-  position: absolute;
-  right: 0;
-  line-height: 0;
+  text-align: center;
+  position: relative;
+  color: #141E30;
+  font-weight: 700;
   }
 
-.vonlinks1.isinview {
-    animation-name: floatinleft;
+.vonoben1.isinview {
+    animation-name: vonoben1;
     transform-origin: 1s;
     animation-duration: 2s;
     animation-iteration-count: 1;
@@ -645,72 +642,111 @@ opacity: 90%;
     animation-fill-mode: forwards; 
 }
 
-@keyframes floatinleft {
+@keyframes vonoben1 {
 0% {
-right: -50%;
+top: 0;
+color: #141E30;
 }
 
 100% {
-right: 0;
+top: 20%;
+color: black;
 }
 }
 
-.dark_left2 {
-  grid-area: dark_left2;
-  font-size: 10rem;
+.through2 {
+  grid-area: bla2;
+  font-size: 6rem;
   text-align: center;
   position: relative;
-  align-items: center;
-  margin-top: 10rem;
-  padding: 0;
-  line-height: 0;
-}
+  color: #141E30;
+  }
 
-.vonlinks2.isinview.checkview {
-    animation-name: floatdark;
-    transform-origin: 6s;
-    animation-duration: 4s;
+.vonoben2.isinview {
+    animation-name: vonoben2;
+    transform-origin: 2s;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
     animation-iteration-count: 1;
-    animation-direction: alternate;
+    animation-direction: linear;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards; 
 }
 
-@keyframes floatdark {
+@keyframes vonoben2 {
 0% {
-opacity: 0;
-letter-spacing: 1rem;
-font-size: 10rem;
-background: #141E30;
-}
-
-35% {
-  opacity: 50%;
-  letter-spacing: 1rem;
-  font-size: 20rem;
-  background: #141E30;
-}
-
-75% {
-  opacity: 100%;
-  letter-spacing: 7rem;
-  font-size: 20rem;
-  background: black;
+  color: #141E30;
+  top: 0;
 }
 
 100% {
-  opacity: 100%;
-  letter-spacing: 7rem;
+  color: black;
+  top: 20%;
+}
+}
+
+/* …dark, through the …*/
+
+.dark {
+  background-color: #141E30;
+}
+
+.dark_raster > * {
+}
+
+.dark_raster {
+  display: grid;
+  grid-template-areas:
+  "dark_left2 dark_left2 dark_left2 dark_left2"
+  ". dark_left3 dark_left4 .";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 100vh 1fr;
+}
+
+.dark_left2 {
+  grid-area: dark_left2;
+  text-align: center;
   font-size: 20rem;
   background: black;
+}
+
+.vonlinks2.isinview {
+    animation-name: floatdark;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes floatdark {
+0% {
+color: #141E30;
+letter-spacing: 6rem;
+font-size: 20rem;
+transform-origin: center;
+}
+
+50% {
+  color: #141E30;
+  letter-spacing: 6rem;
+  font-size: 20rem;
+  transform-origin: center;
+}
+
+100% {
+  color: black;
+  letter-spacing: 1rem;
+  font-size: 10rem;
+  transform-origin: center;
 }
 }
 
 .dark_left3 {
   grid-area: dark_left3;
   font-size: 6rem;
-  text-align: left;
-  color: white;
+  text-align: center;
+  font-weight: 700;
+  color: #141E30;
   left: 0;
   position: relative;
   padding: 0;
@@ -719,7 +755,7 @@ background: #141E30;
 
 .vonlinks3.isinview {
     animation-name: floatinleft3;
-    transform-origin: 10s;
+    transform-origin: 1s;
     animation-duration: 2s;
     animation-iteration-count: 1;
     animation-direction: alternate;
@@ -729,11 +765,13 @@ background: #141E30;
 
 @keyframes floatinleft3 {
 0% {
-left: -50%;
+  color: #141E30;
+  top: 0;
 }
 
 100% {
-left: 0;
+  color: white;
+  top: 20%;
 }
 }
 
@@ -741,8 +779,8 @@ left: 0;
 .dark_left4 {
   grid-area: dark_left4;
   font-size: 6rem;
-  text-align: left;
-  color: white;
+  text-align: center;
+  color: #141E30;
   left: 0;
   position: relative;
   padding: 0;
@@ -751,8 +789,9 @@ left: 0;
 
 .vonlinks4.isinview {
     animation-name: floatinleft4;
-    transform-origin: 12s;
+    transform-origin: 2s;
     animation-duration: 2s;
+    animation-delay: 0.5s;
     animation-iteration-count: 1;
     animation-direction: linear;
     animation-timing-function: ease-in-out;
@@ -760,14 +799,16 @@ left: 0;
 }
 
 @keyframes floatinleft4 {
-0% {
-left: -50%;
-}
+  0% {
+    color: #141E30;
+    top: 0;
+  }
 
-100% {
-left: 0;
-}
-}
+  100% {
+    color: white;
+    top: 20%;
+  }
+  }
 
 
 /*… door*/
@@ -782,7 +823,7 @@ left: 0;
 .door_raster {
   display: grid;
   grid-template-columns: 0.2fr 1fr 1fr 0.2fr;
-  grid-auto-rows: min-content;
+  grid-template-rows: 1fr;
   text-align: center;
 }
 
@@ -828,11 +869,24 @@ left: 0;
 }
 
 
-.zwei.isinview p:nth-child(1) {
+.zwei.isinview
+p:nth-child(1) {
   transform: rotateY(-20deg);
   transition: all 4s ease-out;
   transition-delay: 1s;
+}
 
+
+.drei {
+background: #141E30;
+}
+
+
+.drei.isinview p:nth-child(1) {
+  transform: rotateY(-20deg);
+  transition: all 4s ease-out;
+  transition-delay: 1s;
+  background: white;
 }
 
 
@@ -849,10 +903,9 @@ left: 0;
   display: grid;
   grid-template-columns: 0.2fr 1fr 1fr 1fr 1fr 0.2fr;
   grid-auto-rows: min-content;
-  color: #141E30;
 }
 
-.through {
+.through5 {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
   font-size: 3rem;
@@ -875,6 +928,7 @@ left: 0;
   writing-mode: sideways-rl;
   display: flex;
   text-align: left;
+  font-weight: 700;
 }
 
 .ones {
@@ -883,6 +937,7 @@ left: 0;
   font-size: 3rem;
   text-align: right;
   padding-top: 3rem;
+  font-weight: 700;
 }
 
 .been {
@@ -892,6 +947,8 @@ left: 0;
   writing-mode: sideways-rl;
   display: flex;
   text-align: left;
+  font-weight: 700;
+
 }
 
 .before {
@@ -1208,10 +1265,9 @@ h3 {
 }
 
 .impressum {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   line-height: 1.2;
-  margin-top: 10rem;
-  margin-bottom: 5rem;
+  margin-top: 5rem;
 }
 
 .impressum_raster > * {
@@ -1220,19 +1276,44 @@ h3 {
 .impressum_raster {
   display: grid;
   grid-template-areas:
-  ". about . name .";
+  ". about . name ."
+  ". quelle quelle quelle .";
   grid-template-columns: 0.5fr 1.5fr 0.2fr 1fr 0.5fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: 1fr 0.5fr;
   color: #141E30;
-  background: white;
 }
 
 .about {
   grid-area: about;
-
+  font-weight: 300;
+  padding-bottom: 2rem;
 }
 
 .name {
   grid-area: name;
+  font-weight: 300;
 
+}
+
+.beschrieb {
+  font-weight: 300;
+  padding-bottom: 2rem;
+}
+
+.quelle {
+  grid-area: quelle;
+  font-weight: 300;
+  font-size: 0.9rem;
+  margin-bottom: 0;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  z-index: 1;
+}
+
+.footer {
+  grid-column: 1 / 6;
+  grid-row: 2 / 3;
+  background: #DCE0D9;
+  margin-bottom: 0;
+  padding-bottom: 1rem;
 }
