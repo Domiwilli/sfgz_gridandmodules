@@ -892,7 +892,7 @@ background: #141E30;
 /*Through where no one's been before*/
 
 .noone {
-
+margin-bottom: 6rem;
 }
 
 .noone_raster > * {
@@ -1109,37 +1109,39 @@ background: #141E30;
 
 .animation_left{
     animation-name: bewegen_li;
+    transform-origin: left;
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    animation-timing-function: linear;
+    animation-timing-function: ease;
 }
 
 .animation_left_fast{
     animation-name: bewegen_li_fa;
+    transform-origin: center;
     animation-duration: 2.5s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    animation-timing-function: linear;
+    animation-timing-function: ease;
 }
 
 .animation_right{
     animation-name: bewegen_re;
-    transform-origin: 2s;
+    transform-origin: right;
     animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    animation-timing-function: linear;
+    animation-timing-function: ease;
 
 }
 
 .animation_right_fast{
     animation-name: bewegen_re_fa;
-    transform-origin: 4s;
+    transform-origin: left;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    animation-timing-function: linear;
+    animation-timing-function: ease;
 
 }
 
