@@ -389,7 +389,7 @@ color: #141E30;
 .world1.checkview {
   grid-area: world1;
   font-size: 6rem;
-  text-align: left;
+  text-align: center;
   animation: blinker1 0.25s linear infinite;
 }
 
@@ -403,7 +403,7 @@ color: #141E30;
 .world2.checkview {
   grid-area: world2;
   font-size: 6rem;
-  text-align: left;
+  text-align: center;
   animation: blinker2 0.25s linear infinite;
   animation-delay: 0.25s;
 }
@@ -419,7 +419,7 @@ color: #141E30;
 .world3.checkview {
   grid-area: world3;
   font-size: 6rem;
-  text-align: left;
+  text-align: center;
   animation: blinker3 0.25s linear infinite;
   animation-delay: 0.5s;
 }
@@ -434,7 +434,7 @@ color: #141E30;
 .world4.checkview {
   grid-area: world4;
   font-size: 6rem;
-  text-align: left;
+  text-align: center;
   animation: blinker4 0.25s linear infinite;
   animation-delay: 0.75s;
 }
@@ -449,7 +449,7 @@ color: #141E30;
 .world5.checkview {
   grid-area: world5;
   font-size: 6rem;
-  text-align: left;
+  text-align: center;
   animation: blinker5 0.25s linear infinite;
   animation-delay: 1s;
 }
@@ -464,7 +464,7 @@ color: #141E30;
 .world6.checkview {
   grid-area: world6;
   font-size: 6rem;
-  text-align: left;
+  text-align: center;
   animation: blinker6 0.25s linear infinite;
   animation-delay: 1.25s;
 }
@@ -479,7 +479,7 @@ color: #141E30;
 .world7.checkview {
   grid-area: world7;
   font-size: 6rem;
-  text-align: left;
+  text-align: center;
   animation: blinker7 0.25s linear infinite;
   animation-delay: 1.5s;
 }
@@ -494,7 +494,7 @@ color: #141E30;
 .world8.checkview {
   grid-area: world8;
   font-size: 6rem;
-  text-align: left;
+  text-align: center;
   animation: blinker8 0.25s linear infinite;
   animation-delay: 1.75s;
 }
@@ -509,7 +509,7 @@ color: #141E30;
 .world9.checkview {
   grid-area: world9;
   font-size: 6rem;
-  text-align: left;
+  text-align: center;
   animation: blinker9 0.25s linear infinite;
   animation-delay: 2s;
 }
@@ -524,7 +524,7 @@ color: #141E30;
 .world10.checkview {
   grid-area: world10;
   font-size: 6rem;
-  text-align: left;
+  text-align: center;
   animation: blinker10 0.25s linear infinite;
   animation-delay: 2.25s;
 }
@@ -539,7 +539,7 @@ color: #141E30;
 .world11.checkview {
   grid-area: world11;
   font-size: 6rem;
-  text-align: left;
+  text-align: center;
   animation: blinker11 0.25s linear infinite;
   animation-delay: 2.5s;
 }
@@ -554,7 +554,7 @@ color: #141E30;
 .world12.checkview {
   grid-area: world12;
   font-size: 6rem;
-  text-align: left;
+  text-align: center;
   animation: blinker12 0.25s linear infinite;
   animation-delay: 2.75s;
 }
@@ -564,9 +564,6 @@ color: #141E30;
     color: white;
   }
 }
-
-
-
 
 
 
