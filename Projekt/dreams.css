@@ -15,6 +15,7 @@ h1 {
 
 /* Start */
 
+
 .start {
   background: #141E30;
   padding-top: 20rem;
@@ -41,11 +42,11 @@ h1 {
   right: 0;
 
   animation-name: bewegen;
-  animation-duration: 15s;
+  animation-duration: 7s;
   animation-iteration-count: 1;
   animation-timing-function: linear;
   animation-direction: alternate;
-  animation-delay: 1s;
+  animation-delay: 0s;
   animation-fill-mode: forwards;
 
 }
@@ -87,11 +88,11 @@ h1 {
   padding-top: 2rem;
 
   animation-name: dissapear;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-iteration-count: 1;
   animation-timing-function: ease-out;
   animation-direction: alternate;
-  animation-delay: 16s;
+  animation-delay: 8s;
   animation-fill-mode: forwards;
 
 }
@@ -118,6 +119,15 @@ h1 {
   font-size: 1rem;
   text-align: center;
   z-index: 80;
+  opacity: 0;
+
+  animation-name: startdown;
+  transform-origin: 1s;
+  animation-duration: 1s;
+  animation-delay: 7s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 .scrollit img {
@@ -129,12 +139,12 @@ h1 {
   margin-right: auto;
   position: relative;
   z-index: 80;
-}
+  opacity: 0;
 
-.scrollit img {
   animation-name: startdown;
   transform-origin: 1s;
   animation-duration: 1s;
+  animation-delay: 7s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -143,10 +153,12 @@ h1 {
 @keyframes startdown {
 
 0% {
+  opacity: 100%;
   top: 0;
 }
 
 100% {
+  opacity: 100%;
   top: 30%;
 }
 }
@@ -167,7 +179,7 @@ h1 {
 .close_raster {
   display: grid;
   grid-template-columns: 1fr;
-  grid-auto-rows: repeat(6, 1fr);
+  grid-auto-rows: repeat(3, 1fr);
   background: #141E30;
   color: white;
 }
@@ -186,6 +198,7 @@ h1 {
   animation-name: fadeoutdown;
   transform-origin: 1s;
   animation-duration: 2s;
+  animation-delay: 0.5s;
   animation-timing-function: ease-out;
   animation-iteration-count: linear;
   animation-fill-mode: forwards; 
@@ -204,80 +217,12 @@ h1 {
 }
 }
 
-/* This only changes this particular animation duration
-.animate__animated.animate__fadeOutDown {
-  --animate-duration: 4s;
-}
-*/
-
-
-
-/* And I can see
-
-.cansee {
-  display: grid;
-  background: linear-gradient(180deg, #141E30, white 100%);
-}
-
-.cansee_raster > * {
-
-}
-
-.cansee_raster {
-  margin-top: 10rem;
-  display: grid;
-  font-size: 4rem;
-  padding: 0;
-  line-height: 0;
-  grid-template-columns: 0.2fr repeat(6, 0.25fr) 0.2fr;
-}
-
-.and1 {
-  grid-column: 2;
-  writing-mode: sideways-rl;
-  display: flex;
-  align-items: center;
-}
-
-.and2 {
-  grid-column: 3;
-  writing-mode: sideways-rl;
-  display: flex;
-  align-items: center;
-}
-
-.and3 {
-  grid-column: 4;
-  writing-mode: sideways-rl;
-  display: flex;
-  align-items: center;
-}
-
-.and4 {
-  grid-column: 5;
-  writing-mode: sideways-rl;
-  display: flex;
-  align-items: center;
-}
-
-.and5 {
-  grid-column: 6;
-  writing-mode: sideways-rl;
-  display: flex;
-  align-items: center;
-}
-
-.and6 {
-  grid-column: 7;
-  writing-mode: sideways-rl;
-  display: flex;
-  align-items: center;
-}
-
-*/
+/* And I can see */
 
 .cansee {
   padding-top: 10rem;
+  padding-bottom: 10rem;
+  color: white;
 }
 
 .cansee_raster > * {
@@ -286,14 +231,11 @@ h1 {
 .cansee_raster {
   display: grid;
   grid-template-areas:
-  ". and . "
-  ". i ."
-  ". can ."
-  ". see1 ."
-  ". see2 ."
-  ". see3 .";
-  grid-template-columns: 0.2fr 1fr 0.2fr;
-  grid-template-rows: 0.4fr 0.6fr 0.8fr 1fr 1fr 1fr;
+  ". and and and . "
+  ". can can can ."
+  ". see1 . see2 .";
+  grid-template-columns: 0.2fr 1fr 0.1fr 1fr 0.2fr;
+  grid-template-rows: 1fr 1fr 1fr;
   text-align: center;
   font-weight: 700;
 }
@@ -307,47 +249,13 @@ h1 {
 
 
 .and {
-  font-size: 4rem;
-  grid-area: and;
-  opacity: 0;
-}
-
-.i {
-  font-size: 6rem;
-  grid-area: i;
-  opacity: 0;
-}
-
-.can {
-  font-size: 8rem;
-  grid-area: can;
-  opacity: 0;
-}
-
-.see1 {
-  font-size: 20rem;
-  grid-area: see1;
-  opacity: 0;
-}
-
-.see2 {
   font-size: 10rem;
-  grid-area: see2;
-  padding-top: 4rem;
-  opacity: 0;
+  grid-area: and;
 }
 
-.see3 {
-  font-size: 18rem;
-  margin-bottom: 10rem;
-  grid-area: see3;
-  opacity: 0;
-  padding-bottom: 5rem;
-}
-
-.animation.isinview {
-    animation-name: see_one;
-    animation-duration: 3s;
+.and.isinview {
+    animation-name: and_one;
+    animation-duration: 1s;
     animation-delay: 0.5s;
     animation-iteration-count: 1;
     animation-direction: normal;
@@ -355,17 +263,104 @@ h1 {
     animation-fill-mode: forwards; 
 }
 
-@keyframes see_one {
+@keyframes and_one {
 0% {
-color: #141E30;
-opacity: 0;
+color: white;
+filter: blur(1rem);
 }
 
 100% {
+  color: #141E30;
+  filter: blur(0);
+}
+}
+
+
+.can {
+  font-size: 10rem;
+  grid-area: can;
+}
+
+.can.isinview {
+    animation-name: can_one;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes can_one {
+0% {
+color: white;
+filter: blur(1rem);
+}
+
+100% {
+  color: #141E30;
+  filter: blur(0);
+}
+}
+
+.see1 {
+  font-size: 10rem;
+  text-align: right;
+  grid-area: see1;
+  color: #EDEDF4;
+}
+
+.see2 {
+  font-size: 10rem;
+  text-align: left;
+  grid-area: see2;
+  color: #EDEDF4;
+}
+
+.see1.isinview {
+    animation-name: see_one;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes see_one {
+0% {
+transform: rotateX(90deg);
+color: #EDEDF4;
+}
+
+100% {
+transform: rotateX(0deg);
 color: #141E30;
-opacity: 100%;
 }
 }
+
+.see2.isinview {
+    animation-name: see_two;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes see_two {
+0% {
+transform: rotateX(90deg);
+color: #EDEDF4;
+}
+
+100% {
+transform: rotateX(0deg);
+color: #141E30;
+}
+}
+
 
 
 /* The World */
