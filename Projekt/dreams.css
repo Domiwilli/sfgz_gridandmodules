@@ -380,8 +380,8 @@ color: #141E30;
   " world11 . . world6 "
   " world10 world9 world8 world7 ";
 
-  grid-template-columns: 25vw 25vw 25vw 25vw;
-  grid-template-rows: 25vh 25vh 25vh 25vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   background: #141E30;
   padding-bottom: 3rem;
 }
@@ -595,7 +595,7 @@ color: #141E30;
 .through {
   background-color: #141E30;
   padding-top: 7rem;
-  padding-bottom: 25rem;
+  padding-bottom: 20rem;
 }
 
 .through_raster > * {
@@ -820,8 +820,8 @@ background: black;
 
 .again {
   background-color: #141E30;
-  padding-top: 14rem;
-  padding-bottom: 32rem;
+  padding-top: 10rem;
+  padding-bottom: 25rem;
 }
 
 .again_raster > * {
@@ -1028,7 +1028,6 @@ color: white;
   grid-row: 3 / 4;
   font-size: 3rem;
   text-align: left;
-  padding-top: 5rem;
 }
 
 
