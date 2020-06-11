@@ -365,7 +365,7 @@ color: #141E30;
   color: #141E30;
   font-size: 5rem;
   font-weight: 700;
-line-height: 0.2;
+  line-height: 0.2;
 }
 
 .world_raster > * {
@@ -388,7 +388,6 @@ line-height: 0.2;
 
 .world1.checkview {
   grid-area: world1;
-  font-size: 6rem;
   text-align: left;
   animation: blinker1 0.25s linear infinite;
 }
@@ -402,7 +401,6 @@ line-height: 0.2;
 
 .world2.checkview {
   grid-area: world2;
-  font-size: 6rem;
   text-align: center;
   animation: blinker2 0.25s linear infinite;
   animation-delay: 0.25s;
@@ -418,7 +416,6 @@ line-height: 0.2;
 
 .world3.checkview {
   grid-area: world3;
-  font-size: 6rem;
   text-align: center;
   animation: blinker3 0.25s linear infinite;
   animation-delay: 0.5s;
@@ -433,7 +430,6 @@ line-height: 0.2;
 
 .world4.checkview {
   grid-area: world4;
-  font-size: 6rem;
   text-align: right;
   animation: blinker4 0.25s linear infinite;
   animation-delay: 0.75s;
@@ -448,7 +444,6 @@ line-height: 0.2;
 
 .world5.checkview {
   grid-area: world5;
-  font-size: 6rem;
   text-align: right;
   animation: blinker5 0.25s linear infinite;
   animation-delay: 1s;
@@ -463,7 +458,6 @@ line-height: 0.2;
 
 .world6.checkview {
   grid-area: world6;
-  font-size: 6rem;
   text-align: right;
   animation: blinker6 0.25s linear infinite;
   animation-delay: 1.25s;
@@ -478,7 +472,6 @@ line-height: 0.2;
 
 .world7.checkview {
   grid-area: world7;
-  font-size: 6rem;
   text-align: right;
   animation: blinker7 0.25s linear infinite;
   animation-delay: 1.5s;
@@ -493,7 +486,6 @@ line-height: 0.2;
 
 .world8.checkview {
   grid-area: world8;
-  font-size: 6rem;
   text-align: center;
   animation: blinker8 0.25s linear infinite;
   animation-delay: 1.75s;
@@ -508,7 +500,6 @@ line-height: 0.2;
 
 .world9.checkview {
   grid-area: world9;
-  font-size: 6rem;
   text-align: center;
   animation: blinker9 0.25s linear infinite;
   animation-delay: 2s;
@@ -523,7 +514,6 @@ line-height: 0.2;
 
 .world10.checkview {
   grid-area: world10;
-  font-size: 6rem;
   text-align: left;
   animation: blinker10 0.25s linear infinite;
   animation-delay: 2.25s;
@@ -538,7 +528,6 @@ line-height: 0.2;
 
 .world11.checkview {
   grid-area: world11;
-  font-size: 6rem;
   text-align: left;
   animation: blinker11 0.25s linear infinite;
   animation-delay: 2.5s;
@@ -553,7 +542,6 @@ line-height: 0.2;
 
 .world12.checkview {
   grid-area: world12;
-  font-size: 6rem;
   text-align: left;
   animation: blinker12 0.25s linear infinite;
   animation-delay: 2.75s;
