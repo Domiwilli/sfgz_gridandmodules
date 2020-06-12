@@ -7,8 +7,8 @@
  * Hier allenfalls die Klassennamen anpassen
  */
 
-let checkviewclass = ".checkview"; //Klasse der Elemente, die gecheckt werden sollen
-let inviewclass = "isinview"; //Klasse die gesetzt wird, falls Element im viewport ist
+const checkviewclass = ".checkview"; //Klasse der Elemente, die gecheckt werden sollen
+const inviewclass = "isinview"; //Klasse die gesetzt wird, falls Element im viewport ist
 /**
  * Ab hier nichts aendern!!
  */
@@ -16,10 +16,19 @@ let inviewclass = "isinview"; //Klasse die gesetzt wird, falls Element im viewpo
 const IsInView = el => {
     const boundsTop = el.getBoundingClientRect().top
 
-    const viewport = {
-        top: 0,
-        bottom: window.innerHeight,
+    let offset = 0;
+    if(el.getAttribute('data-attr-offset')!==null){
+        offset = parseInt(el.getAttribute('data-attr-offset'))
     }
+
+
+    const viewport = {
+        top: 0 - offset,
+        bottom: window.innerHeight - offset,
+    }
+
+    console.log(viewport.top)
+    console.log(viewport.top)
 
     const bounds = {
         top: boundsTop,
@@ -39,15 +48,17 @@ document.addEventListener( 'DOMContentLoaded', () => {
 
     const elements = document.querySelectorAll(checkviewclass)
     const handler = () => raf( () => {
-        for (let i = 0; i < elements.length; i++)
-            {
-                if (IsInView(elements[i])) {
-                    elements[i].classList.add(inviewclass)
-                }else{
-                    elements[i].classList.remove(inviewclass)
-                }
-            }
-    } )
+    for (let i = 0; i < elements.length; i++)
+{
+
+
+    if (IsInView(elements[i])) {
+        elements[i].classList.add(inviewclass)
+    }else{
+        elements[i].classList.remove(inviewclass)
+    }
+}
+} )
 
 handler()
 window.addEventListener( 'scroll', handler )

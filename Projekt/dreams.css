@@ -387,7 +387,7 @@ color: #141E30;
   padding: 3rem;
 }
 
-.world1.checkview {
+..isinview .world1 {
   grid-area: world1;
   text-align: left;
   animation: blinker1 0.25s linear infinite;
@@ -400,7 +400,7 @@ color: #141E30;
 }
 
 
-.world2.checkview {
+.isinview .world2 {
   grid-area: world2;
   text-align: center;
   animation: blinker2 0.25s linear infinite;
@@ -415,7 +415,7 @@ color: #141E30;
 
 
 
-.world3.checkview {
+.isinview .world3 {
   grid-area: world3;
   text-align: center;
   animation: blinker3 0.25s linear infinite;
@@ -429,7 +429,7 @@ color: #141E30;
 }
 
 
-.world4.checkview {
+.isinview .world4 {
   grid-area: world4;
   text-align: right;
   animation: blinker4 0.25s linear infinite;
@@ -443,7 +443,7 @@ color: #141E30;
 }
 
 
-.world5.checkview {
+.isinview .world5 {
   grid-area: world5;
   text-align: right;
   animation: blinker5 0.25s linear infinite;
@@ -457,7 +457,7 @@ color: #141E30;
 }
 
 
-.world6.checkview {
+.isinview .world6 {
   grid-area: world6;
   text-align: right;
   animation: blinker6 0.25s linear infinite;
@@ -471,7 +471,7 @@ color: #141E30;
 }
 
 
-.world7.checkview {
+.isinview .world7 {
   grid-area: world7;
   text-align: right;
   animation: blinker7 0.25s linear infinite;
@@ -485,7 +485,7 @@ color: #141E30;
 }
 
 
-.world8.checkview {
+.isinview .world8 {
   grid-area: world8;
   text-align: center;
   animation: blinker8 0.25s linear infinite;
@@ -499,7 +499,7 @@ color: #141E30;
 }
 
 
-.world9.checkview {
+.isinview .world9 {
   grid-area: world9;
   text-align: center;
   animation: blinker9 0.25s linear infinite;
@@ -513,7 +513,7 @@ color: #141E30;
 }
 
 
-.world10.checkview {
+.isinview .world10 {
   grid-area: world10;
   text-align: left;
   animation: blinker10 0.25s linear infinite;
@@ -527,7 +527,7 @@ color: #141E30;
 }
 
 
-.world11.checkview {
+.isinview .world11 {
   grid-area: world11;
   text-align: left;
   animation: blinker11 0.25s linear infinite;
@@ -541,7 +541,7 @@ color: #141E30;
 }
 
 
-.world12.checkview {
+.isinview .world12{
   grid-area: world12;
   text-align: left;
   animation: blinker12 0.25s linear infinite;
