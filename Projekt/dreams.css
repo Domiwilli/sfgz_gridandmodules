@@ -1,5 +1,3 @@
-
-
 body {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: normal;
@@ -12,8 +10,8 @@ h1 {
   position: relative;
 }
 
-
 /* Start */
+
 
 .start {
   background: #141E30;
@@ -27,14 +25,106 @@ h1 {
 .start_raster {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: min-content;
   background: #141E30;
   color: white;
 }
 
+.headtop img {
+  width: 30%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  animation-name: bewegen;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes bewegen {
+  0% {
+   left: 0;
+   transform: rotate(0deg);
+  }
+
+  25% {
+   top: 60%;
+   transform: rotate(180deg);
+  }
+
+  50% {
+   left: 80%;
+   transform: rotate(360deg);
+  }
+
+  75% {
+   top: 20%;
+   transform: rotate(180deg);
+  }
+
+  100% {
+   left: 35%;
+   transform: rotate(0deg);
+  }
+
+}
+
+.headbottom.isinview img  {
+  width: 30%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  padding-top: 2rem;
+
+  animation-name: dissapear;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-direction: alternate;
+  animation-delay: 5.5s;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes dissapear {
+  0% {
+   filter: blur(0);
+   opacity: 100%;
+  }
+
+  50% {
+   filter: blur(3rem);
+   opacity: 100%;
+  }
+
+  100% {
+    filter: blur(3rem);
+    opacity: 0;
+  }
+}
+
+
 .advice {
   font-size: 1rem;
   text-align: center;
+  z-index: 80;
+  opacity: 0;
+
+  animation-name: startdown;
+  transform-origin: 1s;
+  animation-duration: 1s;
+  animation-delay: 5.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 .scrollit img {
@@ -45,12 +135,13 @@ h1 {
   margin-left: auto;
   margin-right: auto;
   position: relative;
-}
+  z-index: 80;
+  opacity: 0;
 
-.scrollit img {
   animation-name: startdown;
   transform-origin: 1s;
   animation-duration: 1s;
+  animation-delay: 6s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -59,10 +150,12 @@ h1 {
 @keyframes startdown {
 
 0% {
+  opacity: 100%;
   top: 0;
 }
 
 100% {
+  opacity: 100%;
   top: 30%;
 }
 }
@@ -83,7 +176,7 @@ h1 {
 .close_raster {
   display: grid;
   grid-template-columns: 1fr;
-  grid-auto-rows: repeat(6, 1fr);
+  grid-auto-rows: repeat(3, 1fr);
   background: #141E30;
   color: white;
 }
@@ -102,6 +195,7 @@ h1 {
   animation-name: fadeoutdown;
   transform-origin: 1s;
   animation-duration: 2s;
+  animation-delay: 0.5s;
   animation-timing-function: ease-out;
   animation-iteration-count: linear;
   animation-fill-mode: forwards; 
@@ -120,82 +214,12 @@ h1 {
 }
 }
 
-/* This only changes this particular animation duration
-.animate__animated.animate__fadeOutDown {
-  --animate-duration: 4s;
-}
-*/
-
-
-
-/* And I can see
+/* And I can see */
 
 .cansee {
-  display: grid;
-  background: linear-gradient(180deg, #141E30, white 100%);
-}
-
-.cansee_raster > * {
-
-}
-
-.cansee_raster {
-  margin-top: 10rem;
-  display: grid;
-  font-size: 4rem;
-  padding: 0;
-  line-height: 0;
-  grid-template-columns: 0.2fr repeat(6, 0.25fr) 0.2fr;
-}
-
-.and1 {
-  grid-column: 2;
-  writing-mode: sideways-rl;
-  display: flex;
-  align-items: center;
-}
-
-.and2 {
-  grid-column: 3;
-  writing-mode: sideways-rl;
-  display: flex;
-  align-items: center;
-}
-
-.and3 {
-  grid-column: 4;
-  writing-mode: sideways-rl;
-  display: flex;
-  align-items: center;
-}
-
-.and4 {
-  grid-column: 5;
-  writing-mode: sideways-rl;
-  display: flex;
-  align-items: center;
-}
-
-.and5 {
-  grid-column: 6;
-  writing-mode: sideways-rl;
-  display: flex;
-  align-items: center;
-}
-
-.and6 {
-  grid-column: 7;
-  writing-mode: sideways-rl;
-  display: flex;
-  align-items: center;
-}
-
-*/
-
-.cansee {
-  background: rgb(20,30,48);
-  background: linear-gradient(180deg, rgba(20,30,48,1) 0%, rgba(130,136,145,1) 47%, rgba(255,255,255,1) 100%);
-  padding-top: 10rem;
+  padding-top: 16rem;
+  padding-bottom: 16rem;
+  color: white;
 }
 
 .cansee_raster > * {
@@ -204,14 +228,11 @@ h1 {
 .cansee_raster {
   display: grid;
   grid-template-areas:
-  ". and . "
-  ". i ."
-  ". can ."
-  ". see1 ."
-  ". see2 ."
-  ". see3 .";
-  grid-template-columns: 0.2fr 1fr 0.2fr;
-  grid-template-rows: 0.4fr 0.6fr 0.8fr 1fr 1fr 1fr;
+  ". and and and . "
+  ". can can can ."
+  ". see1 . see2 .";
+  grid-template-columns: 0.2fr 1fr 0.1fr 1fr 0.2fr;
+  grid-template-rows: 1fr 1fr 1fr;
   text-align: center;
   font-weight: 700;
 }
@@ -225,46 +246,13 @@ h1 {
 
 
 .and {
-  font-size: 4rem;
-  grid-area: and;
-  opacity: 0;
-}
-
-.i {
-  font-size: 6rem;
-  grid-area: i;
-  opacity: 0;
-}
-
-.can {
-  font-size: 8rem;
-  grid-area: can;
-  opacity: 0;
-}
-
-.see1 {
-  font-size: 20rem;
-  grid-area: see1;
-  opacity: 0;
-}
-
-.see2 {
   font-size: 10rem;
-  grid-area: see2;
-  padding-top: 4rem;
-  opacity: 0;
+  grid-area: and;
 }
 
-.see3 {
-  font-size: 18rem;
-  margin-bottom: 10rem;
-  grid-area: see3;
-  opacity: 0;
-}
-
-.animation.isinview {
-    animation-name: see_one;
-    animation-duration: 3s;
+.and.isinview {
+    animation-name: and_one;
+    animation-duration: 1s;
     animation-delay: 0.5s;
     animation-iteration-count: 1;
     animation-direction: normal;
@@ -272,38 +260,113 @@ h1 {
     animation-fill-mode: forwards; 
 }
 
-@keyframes see_one {
+@keyframes and_one {
 0% {
-color: #141E30;
-opacity: 0;
+color: white;
+filter: blur(1rem);
 }
 
 100% {
+  color: #141E30;
+  filter: blur(0);
+}
+}
+
+
+.can {
+  font-size: 10rem;
+  grid-area: can;
+}
+
+.can.isinview {
+    animation-name: can_one;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes can_one {
+0% {
+color: white;
+filter: blur(1rem);
+}
+
+100% {
+  color: #141E30;
+  filter: blur(0);
+}
+}
+
+.see1 {
+  font-size: 10rem;
+  text-align: right;
+  grid-area: see1;
+  color: white;
+}
+
+.see2 {
+  font-size: 10rem;
+  text-align: left;
+  grid-area: see2;
+  color: white;
+}
+
+.see1.isinview {
+    animation-name: see_one;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes see_one {
+0% {
+transform: rotateX(90deg);
+color: #EDEDF4;
+}
+
+100% {
+transform: rotateX(0deg);
 color: #141E30;
-opacity: 100%;
 }
 }
+
+.see2.isinview {
+    animation-name: see_two;
+    animation-duration: 1.5s;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes see_two {
+0% {
+transform: rotateX(90deg);
+color: #EDEDF4;
+}
+
+100% {
+transform: rotateX(0deg);
+color: #141E30;
+}
+}
+
 
 
 /* The World */
-
-/*
-.world_raster {
-  margin-top: 10rem;
-  color: black;
-  display: grid;
-  padding: 0;
-  grid-template-areas:
-  ". the . . ."
-  ". w o . ."
-  ". . r l ."
-  ". . r d .";
-  grid-template-columns: 25vw 1fr 1fr 0.5fr 25vw;
-  grid-template-rows: 5vh 20vh 30vh 30vh;
-  grid-auto-flow: row;
+.world {
+  color: #141E30;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 0.2;
 }
-
-*/
 
 .world_raster > * {
 
@@ -311,291 +374,203 @@ opacity: 100%;
 
 .world_raster {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-auto-rows: 1fr;
-  font-weight: 700;
+  grid-template-areas:
+  " world1 world2 world3 world4 "
+  " world12 . . world5 "
+  " world11 . . world6 "
+  " world10 world9 world8 world7 ";
+
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.4fr 0.4fr 0.4fr 0.4fr;
+  background: #141E30;
+  padding-bottom: 3rem;
 }
 
-.the {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-  font-size: 6rem;
+.world1.checkview {
+  grid-area: world1;
   text-align: left;
-  opacity: 0;
-
+  animation: blinker1 0.25s linear infinite;
 }
 
-.w {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-  font-size: 100rem;
+@keyframes blinker1 {
+  50% {
+    color: white;
+  }
+}
+
+
+.world2.checkview {
+  grid-area: world2;
+  text-align: center;
+  animation: blinker2 0.25s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes blinker2 {
+  50% {
+    color: white;
+  }
+}
+
+
+
+.world3.checkview {
+  grid-area: world3;
+  text-align: center;
+  animation: blinker3 0.25s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes blinker3 {
+  50% {
+    color: white;
+  }
+}
+
+
+.world4.checkview {
+  grid-area: world4;
   text-align: right;
-  padding: 0;
-  margin: 0;
-  opacity: 0;
+  animation: blinker4 0.25s linear infinite;
+  animation-delay: 0.75s;
 }
 
-.o {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-  font-size: 100rem;
+@keyframes blinker4 {
+  50% {
+    color: white;
+  }
+}
+
+
+.world5.checkview {
+  grid-area: world5;
+  text-align: right;
+  animation: blinker5 0.25s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes blinker5 {
+  50% {
+    color: white;
+  }
+}
+
+
+.world6.checkview {
+  grid-area: world6;
+  text-align: right;
+  animation: blinker6 0.25s linear infinite;
+  animation-delay: 1.25s;
+}
+
+@keyframes blinker6 {
+  50% {
+    color: white;
+  }
+}
+
+
+.world7.checkview {
+  grid-area: world7;
+  text-align: right;
+  animation: blinker7 0.25s linear infinite;
+  animation-delay: 1.5s;
+}
+
+@keyframes blinker7 {
+  50% {
+    color: white;
+  }
+}
+
+
+.world8.checkview {
+  grid-area: world8;
+  text-align: center;
+  animation: blinker8 0.25s linear infinite;
+  animation-delay: 1.75s;
+}
+
+@keyframes blinker8 {
+  50% {
+    color: white;
+  }
+}
+
+
+.world9.checkview {
+  grid-area: world9;
+  text-align: center;
+  animation: blinker9 0.25s linear infinite;
+  animation-delay: 2s;
+}
+
+@keyframes blinker9 {
+  50% {
+    color: white;
+  }
+}
+
+
+.world10.checkview {
+  grid-area: world10;
   text-align: left;
-  padding: 0;
-  margin: 0;
-  opacity: 0;
-
+  animation: blinker10 0.25s linear infinite;
+  animation-delay: 2.25s;
 }
 
-.r {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-  font-size: 120rem;
-  text-align: center;
-  padding: 0;
-  margin: 0;
-  writing-mode: sideways-lr;
-  opacity: 0;
-
-}
-
-.l {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-  font-size: 120rem;
-  text-align: right;
-  padding: 0;
-  margin: 0;
-  opacity: 0;
-
-}
-
-.d {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-  font-size: 120rem;
-  text-align: center;
-  writing-mode: sideways-lr;
-  padding: 0;
-  margin: 0;
-  opacity: 0;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: flex-start;
-
+@keyframes blinker10 {
+  50% {
+    color: white;
+  }
 }
 
 
-.action1.isinview {
-    animation-name: action1;
-    animation-duration: 1s;
-    animation-delay: 0.5s;
-    animation-iteration-count: 1;
-    animation-direction: linear;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards; 
+.world11.checkview {
+  grid-area: world11;
+  text-align: left;
+  animation: blinker11 0.25s linear infinite;
+  animation-delay: 2.5s;
 }
 
-.action2.isinview {
-    animation-name: action2;
-    animation-duration: 1s;
-    animation-delay: 1s;
-    animation-iteration-count: 1;
-    animation-direction: linear;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards; 
-}
-
-.action3.isinview {
-    animation-name: action3;
-    animation-duration: 1s;
-    animation-delay: 1.5s;
-    animation-iteration-count: 1;
-    animation-direction: linear;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards; 
-}
-
-.action4.isinview {
-    animation-name: action4;
-    animation-duration: 1s;
-    animation-delay: 2s;
-    animation-iteration-count: 1;
-    animation-direction: linear;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards; 
-}
-
-.action5.isinview {
-    animation-name: action5;
-    animation-duration: 1s;
-    animation-delay: 2.5s;
-    animation-iteration-count: 1;
-    animation-direction: linear;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards; 
-}
-
-.action6.isinview {
-    animation-name: action6;
-    animation-duration: 1s;
-    animation-delay: 3.5s;
-    animation-iteration-count: 1;
-    animation-direction: linear;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards; 
-}
-
-@keyframes action1 {
-0% {
-color: #141E30;
-opacity: 0;
-}
-
-100% {
-color: #141E30;
-opacity: 100%;
-}
-}
-
-@keyframes action2 {
-0% {
-color: #141E30;
-opacity: 0;
-}
-
-100% {
-color: #141E30;
-opacity: 100%;
-}
-}
-
-@keyframes action3 {
-0% {
-color: #25CED1;
-opacity: 0;
-}
-
-100% {
-color: #25CED1;
-opacity: 90%;
-}
-}
-
-@keyframes action4 {
-0% {
-color: #FCEADE;
-opacity: 0;
-}
-
-100% {
-color: #FCEADE;
-opacity: 90%;
-}
-}
-
-@keyframes action5 {
-0% {
-color: #FF8A5B;
-opacity: 0;
-}
-
-100% {
-color: #FF8A5B;
-opacity: 90%;
-}
+@keyframes blinker11 {
+  50% {
+    color: white;
+  }
 }
 
 
-@keyframes action6 {
-0% {
-color: #EA526F;
-opacity: 0;
+.world12.checkview {
+  grid-area: world12;
+  text-align: left;
+  animation: blinker12 0.25s linear infinite;
+  animation-delay: 2.75s;
 }
 
-100% {
-color: #EA526F;
-opacity: 90%;
-}
-}
-
-
-/*
-
-.the {
-  font-size: 6rem;
-  line-height: 0;
-  grid-area: the;
+@keyframes blinker12 {
+  50% {
+    color: white;
+  }
 }
 
-.w {
-  font-size: 18rem;
-  line-height: 1;
-  margin-top: 0;
-  margin-bottom: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  grid-area: w;
-}
 
-.o {
-  font-size: 18rem;
-  margin-top: 2rem;
-  margin-bottom: 0;
-  line-height: 0.5;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  grid-area: o;
-}
 
-.r {
-  font-size: 30rem;
-  text-align: center;
-  margin-right: 5rem;
-  margin-top: 0;
-  margin-bottom: 0;
-  grid-area: r;
-}
 
-.l {
-  font-size: 20rem;
-  line-height: 0;
-  writing-mode: sideways-lr;
-  margin-left: 5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-end;
-  grid-area: l;
-}
-
-.d {
-  font-size: 15rem;
-  grid-area: d;
-  text-align: right;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-*/
-
-/* That's wating up for me */
+/* That's waiting up for me */
 
 .waiting {
 }
 
-.wating_raster > * {
+.waiting_raster > * {
 }
 
-.wating_raster {
+.waiting_raster {
   font-size: 4rem;
   font-weight: 700;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, minmax(800px, 1fr));
-  color: black;
+  color: #141E30;
   text-align: center;
   margin-top: 20rem;
   font-weight: 700;
@@ -603,61 +578,319 @@ opacity: 90%;
 }
 
 
-/*Through the dark, through the …*/
+/*Through the… */
 
-.dark {
+.through {
   background-color: #141E30;
-  padding-top: 50rem;
+  padding-top: 7rem;
+  padding-bottom: 20rem;
 }
 
-.dark_raster > * {
+.through_raster > * {
 }
 
-.dark_raster {
+.through_raster {
+  display: grid;
+  grid-template-areas:
+  ". bla1 bla2 .";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  margin-top: 10rem;
+}
+
+.through1 {
+  grid-area: bla1;
+  font-size: 6rem;
+  text-align: center;
+  position: relative;
+  color: #141E30;
+  font-weight: 700;
+  }
+
+.vonoben1.isinview {
+    animation-name: vonoben1;
+    transform-origin: 1s;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-direction: linear;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes vonoben1 {
+0% {
+top: 0;
+color: #141E30;
+}
+
+100% {
+top: 20%;
+color: black;
+}
+}
+
+.through2 {
+  grid-area: bla2;
+  font-size: 6rem;
+  text-align: center;
+  position: relative;
+  color: #141E30;
+  }
+
+.vonoben2.isinview {
+    animation-name: vonoben2;
+    transform-origin: 2s;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    animation-direction: linear;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes vonoben2 {
+0% {
+  color: #141E30;
+  top: 0;
+}
+
+100% {
+  color: black;
+  top: 20%;
+}
+}
+
+/* …dark,*/
+
+.dunkelheit {
+background: black;
+}
+
+.dunkelheit_raster {
   display: grid;
   grid-template-columns: 0.2fr 1fr 1fr 1fr 1fr 0.2fr;
-  grid-auto-rows: min-content;
+  grid-template-rows: 1fr;
+  padding-top: 25rem;
+  padding-bottom: 20rem;
+}
+
+.dark1 {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  font-size: 20rem;
+  font-weight: 700;
   text-align: center;
-  margin-top: 20rem;
-}
-
-.dark_left1 {
-  grid-column: 1 / 3;
-  grid-row: 1 / 2;
-  font-size: 6rem;
-  text-align: left;
   position: relative;
-  color: #black;
+  left: 0;
+  text-shadow: 0 0 20px white;
 }
 
-.dark_left2 {
-  grid-column: 4 / 7;
+.bewegt1.isinview {
+  animation-name: leftie;
+  transform-origin: 1s;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  }
+
+  @keyframes leftie {
+  0% {
+    text-shadow: 0 0 20px white;
+  }
+
+  100% {
+    text-shadow: 0 0 0 ;
+  }
+  }
+
+.dark2 {
+  grid-column: 3 / 4;
   grid-row: 1 / 2;
-  font-size: 10rem;
-  text-align: right;
+  font-size: 20rem;
+  font-weight: 700;
+  text-align: center;
   position: relative;
-  color: #black;
+  left: 0;
+  text-shadow: 0 0 20px white;
 }
 
-.dark_right1 {
-  grid-column: 1 / 7;
-  grid-row: 2 / 3;
+.bewegt2.isinview {
+  animation-name: leftieleft;
+  transform-origin: 1s;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  }
+
+  @keyframes leftieleft {
+  0% {
+    text-shadow: 0 0 20px white;
+  }
+
+  100% {
+    text-shadow: 0 0 0 ;
+  }
+  }
+
+.dark3 {
+  grid-column: 4 / 5;
+  grid-row: 1 / 2;
+  font-size: 20rem;
+  font-weight: 700;
+  position: relative;
+  left: 0;
+  text-align: center;
+  text-shadow: 0 0 20px white;
+}
+
+.bewegt3.isinview {
+  animation-name: lef;
+  transform-origin: 1s;
+  animation-duration: 1s;
+  animation-delay: 1.5s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  }
+
+  @keyframes lef {
+  0% {
+    text-shadow: 0 0 20px white;
+  }
+
+  100% {
+    text-shadow: 0 0 0 ;
+  }
+  }
+
+.dark4 {
+  grid-column: 5 / 6;
+  grid-row: 1 / 2;
+  font-size: 20rem;
+  font-weight: 700;
+  position: relative;
+  left: 0;
+  text-align: center;
+  text-shadow: 0 0 20px white;
+}
+
+.bewegt4.isinview {
+  animation-name: leflef;
+  transform-origin: 1s;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  }
+
+  @keyframes leflef {
+  0% {
+    text-shadow: 0 0 20px white;
+  }
+
+  100% {
+    text-shadow: 0 0 0 ;
+  }
+  }
+
+
+
+/* …through the…*/
+
+.again {
+  background-color: #141E30;
+  padding-top: 10rem;
+  padding-bottom: 25rem;
+}
+
+.again_raster > * {
+}
+
+.again_raster {
+  display: grid;
+  grid-template-areas:
+  ". bla3 bla4 .";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  margin-top: 10rem;
+}
+
+.again1 {
+  grid-area: bla3;
   font-size: 6rem;
-  text-align: right;
+  text-align: center;
+  position: relative;
+  color: #141E30;
+  font-weight: 700;
+  }
+
+.vontop1.isinview {
+    animation-name: vontop1;
+    transform-origin: 1s;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-direction: linear;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; 
 }
 
-.dark_right2 {
-  grid-column: 1 / 7;
-  grid-row: 3 / 4;
+@keyframes vontop1 {
+0% {
+top: 0;
+color: #141E30;
+}
+
+100% {
+top: 20%;
+color: black;
+}
+}
+
+.again2 {
+  grid-area: bla4;
   font-size: 6rem;
-  text-align: right;
+  text-align: center;
+  position: relative;
+  color: #141E30;
+  }
+
+.vontop2.isinview {
+    animation-name: vontop2;
+    transform-origin: 2s;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    animation-direction: linear;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; 
 }
 
+@keyframes vontop2 {
+0% {
+  color: #141E30;
+  top: 0;
+}
+
+100% {
+  color: black;
+  top: 20%;
+}
+}
 
 /*… door*/
 
 .door {
-  background-color: #141E30;
+  background: white;
+  margin: 5rem;
 }
 
 .door_raster > * {
@@ -666,8 +899,7 @@ opacity: 90%;
 .door_raster {
   display: grid;
   grid-template-columns: 0.2fr 1fr 1fr 0.2fr;
-  grid-auto-rows: min-content;
-  text-align: center;
+  grid-template-rows: 1fr;
 }
 
 .do {
@@ -676,6 +908,7 @@ opacity: 90%;
   font-size: 20rem;
   text-align: right;
   font-weight: 700;
+  color: #141E30;
 }
 
 .do div p {
@@ -686,18 +919,19 @@ opacity: 90%;
   perspective-origin: 50% 50%;
   perspective: 300px;
 }
-
-.eins:hover p {
-   transform: rotateY(20deg);
+/*
+.eins.isinview p:nth-child(1) {
+  transform: rotateY(20deg);
+  transition: all 3s ease-out;
 }
-
-
+*/
 .or {
   grid-column: 3 / 4;
   grid-row: 1 / 2;
   font-size: 20rem;
   text-align: left;
   font-weight: 700;
+  color: #141E30;
 }
 
 .or div p {
@@ -710,15 +944,21 @@ opacity: 90%;
 }
 
 
-.zwei.isinview p:nth-child(1) {
+.zwei.isinview
+p:nth-child(1) {
   transform: rotateY(-20deg);
-  transition: all 1s ease-out;
+  transition: all 4s ease-out;
+  transition-delay: 1s;
 }
+
+
+
 
 /*Through where no one's been before*/
 
 .noone {
-
+background: #16425B;
+color: white;
 }
 
 .noone_raster > * {
@@ -726,105 +966,63 @@ opacity: 90%;
 
 .noone_raster {
   display: grid;
-  grid-template-columns: 0.2fr 1fr 1fr 1fr 1fr 0.2fr;
-  grid-auto-rows: min-content;
-  color: black;
+  grid-template-columns: 0.5fr 1fr 0.6fr 0.9fr ;
+  grid-template-rows: 0.2fr 0.5fr 1fr;
 }
 
-.through {
+.through5 {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
   font-size: 3rem;
-  text-align: left;
+  text-align: right;
   padding-top: 10rem;
-}
-
-.where {
-  grid-column: 4 / 5;
-  grid-row: 2 / 3;
-  font-size: 3rem;
-  text-align: left;
-  padding-bottom: 5rem;
+  padding-bottom: 0;
 }
 
 .no {
   grid-column: 3 / 4;
+  grid-row: 2 / 3;
+  font-size: 7rem;
+  text-align: center;
+  font-weight: 700;
+  padding: 0;
+  position: relative;
+}
+
+.no.isinview {
+  animation-name: kipp;
+  transform-origin: center;
+  animation-duration: 3s;
+  animation-delay: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes kipp {
+  0% {
+    transform: rotateZ(0deg);
+
+  }
+
+  100% {
+    transform: rotateZ(-360deg);
+  }
+}
+
+.has {
+  grid-column: 2 / 3;
   grid-row: 3 / 4;
   font-size: 3rem;
-  writing-mode: sideways-rl;
-  display: flex;
   text-align: left;
-}
-
-.ones {
-  grid-column: 4 / 5;
-  grid-row: 4 / 5;
-  font-size: 3rem;
-  text-align: right;
-  padding-top: 3rem;
-}
-
-.been {
-  grid-column: 5 / 6;
-  grid-row: 5 / 6;
-  font-size: 3rem;
-  writing-mode: sideways-rl;
-  display: flex;
-  text-align: left;
-}
-
-.before {
-  grid-column: 3 / 4;
-  grid-row: 6 / 7;
-  font-size: 3rem;
-  text-align: left;
-}
-
-.dreams1 {
-  grid-column: 3 / 4;
-  grid-row: 7 / 8;
-  font-size: 3rem;
-  text-align: right;
-  color: #525B76;
-}
-
-.dreams2 {
-  grid-column: 4 / 5;
-  grid-row: 8 / 9;
-  font-size: 3rem;
-  text-align: left;
-  color: #1F5673;
-}
-
-.dreams3 {
-  grid-column: 3 / 4;
-  grid-row: 9 / 10;
-  font-size: 3rem;
-  text-align: left;
-  color: #759FBC;
-}
-
-.dreams4 {
-  grid-column: 3 / 4;
-  grid-row: 10 / 11;
-  font-size: 3rem;
-  text-align: right;
-  color: #90C3C8;
-}
-
-.dreams5 {
-  grid-column: 2 / 3;
-  grid-row: 11 / 12;
-  font-size: 3rem;
-  text-align: right;
-  color: #B5D6D6;
 }
 
 
 /*A Million Dreams*/
 .dreams {
-  background: rgb(255,255,255);
-  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(39,222,226,1) 18%, rgba(11,27,97,1) 38%, rgba(217,29,205,1) 62%, rgba(233,184,27,1) 81%);
+  background: rgb(9,210,206);
+  background: linear-gradient(180deg, rgba(9,210,206,1) 0%, rgba(35,108,150,1) 30%, rgba(146,54,177,1) 59%, rgba(250,208,3,1) 100%);
   padding-top: 10rem;
 }
 
@@ -833,7 +1031,6 @@ opacity: 90%;
 /*
 .dreams_raster > * {
 }
-
 .dreams_raster {
   display: grid;
   grid-template-columns: 0.2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.2fr;
@@ -858,37 +1055,39 @@ opacity: 90%;
 
 .animation_left{
     animation-name: bewegen_li;
+    transform-origin: left;
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    animation-timing-function: linear;
+    animation-timing-function: ease;
 }
 
 .animation_left_fast{
     animation-name: bewegen_li_fa;
+    transform-origin: center;
     animation-duration: 2.5s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    animation-timing-function: linear;
+    animation-timing-function: ease;
 }
 
 .animation_right{
     animation-name: bewegen_re;
-    transform-origin: 2s;
+    transform-origin: right;
     animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    animation-timing-function: linear;
+    animation-timing-function: ease;
 
 }
 
 .animation_right_fast{
     animation-name: bewegen_re_fa;
-    transform-origin: 4s;
+    transform-origin: left;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    animation-timing-function: linear;
+    animation-timing-function: ease;
 
 }
 
@@ -905,7 +1104,6 @@ opacity: 90%;
 0% {
 left: 0;
 opacity: 100%;
-font-size: 2.7rem;
 }
 
 50% {
@@ -915,26 +1113,22 @@ opacity: 50%;
 100% {
 left: 20px;
 opacity: 100%;
-font-size: 3rem;
 }
 }
 
 @keyframes bewegen_li_fa {
 0% {
 left: 40px;
-font-size: 3rem;
 }
 
 100% {
 left: 0;
-font-size: 2.9rem;
 }
 }
 
 @keyframes bewegen_re {
 0% {
 opacity: 100%;
-font-size: 3rem;
 }
 
 30% {
@@ -943,7 +1137,6 @@ opacity: 0%;
 
 100% {
 opacity: 100%;
-font-size: 2.7rem;
 }
 }
 
@@ -1052,13 +1245,35 @@ right: 30px;
   grid-column: 3 / 4;
   grid-row: 10 / 11;
   font-size: 2rem;
-  text-align: left;
-  padding-bottom: 20rem;
+  text-align: right;
+  margin-bottom: 15rem;
+}
+
+.glow{
+    animation-name: glowing;
+    transform-origin: center;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease;
+}
+
+@keyframes glowing {
+	0% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+	}
+	100% {
+        text-shadow: 0 0 30px  rgba(230, 230, 230, 0.7);
+	}
 }
 
 /*That's all it takes*/
 
 .all {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  background: rgba(250,208,3,1);
 }
 
 .all_raster > * {
@@ -1069,7 +1284,79 @@ right: 30px;
   font-weight: 700;
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 1fr;
   color: white;
   text-align: center;
-  margin-top: 20rem;
+}
+
+.hillpic img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/*Impressum*/
+
+h3 {
+  line-height: 1;
+}
+
+.impressum {
+  font-size: 1.2rem;
+  line-height: 1.2;
+  margin-top: 5rem;
+}
+
+.impressum_raster > * {
+}
+
+.impressum_raster {
+  display: grid;
+  grid-template-areas:
+  ". about . name ."
+  ". quelle quelle quelle .";
+  grid-template-columns: 0.5fr 1.5fr 0.2fr 1fr 0.5fr;
+  grid-template-rows: 1fr 0.5fr;
+  color: #141E30;
+}
+
+.about {
+  grid-area: about;
+  font-weight: 300;
+  padding-bottom: 2rem;
+}
+
+.name {
+  grid-area: name;
+  font-weight: 300;
+
+}
+
+.beschrieb {
+  font-weight: 300;
+  padding-bottom: 2rem;
+}
+
+.quelle {
+  grid-area: quelle;
+  font-weight: 300;
+  font-size: 0.9rem;
+  margin-bottom: 0;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  z-index: 1;
+}
+
+.footer {
+  grid-column: 1 / 6;
+  grid-row: 2 / 3;
+  background: #DCE0D9;
+  margin-bottom: 0;
+  padding-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(250,208,3,1);
+  font-weight: 400;
 }
