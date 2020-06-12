@@ -313,7 +313,7 @@ bedingung erfüllt ist
 }
 }
 
-
+}
 /* I close my Eyes */
 
 .close {
@@ -424,7 +424,7 @@ bedingung erfüllt ist
   top: 50%;
 }
 }
-
+}
 
 /* And I can see */
 
@@ -716,7 +716,7 @@ transform: rotateX(0deg);
 color: #141E30;
 }
 }
-
+}
 /* The World */
 .world {
   color: #141E30;
@@ -938,7 +938,7 @@ bedingung erfüllt ist
   background: #141E30;
   padding: 1rem;
 }
-
+}
 /* That's waiting up for me */
 
 .waiting {
@@ -983,7 +983,7 @@ bedingung erfüllt ist
   font-weight: 700;
 
 }
-
+}
 /*Through the… */
 
 .through {
@@ -1149,7 +1149,7 @@ color: black;
   top: 20%;
 }
 }
-
+}
 /* …dark,*/
 
 .dunkelheit {
@@ -1436,7 +1436,7 @@ background: black;
       text-shadow: 0 0 0 ;
     }
     }
-
+}
 /* …through the…*/
 
 .again {
@@ -1602,7 +1602,7 @@ color: black;
   top: 20%;
 }
 }
-
+}
 /*… door*/
 
 .door {
@@ -1726,7 +1726,7 @@ p:nth-child(1) {
   transition: all 4s ease-out;
   transition-delay: 1s;
 }
-
+}
 /*Through where no one's been before*/
 
 .noone {
@@ -1857,7 +1857,7 @@ color: white;
   font-size: 3rem;
   text-align: left;
 }
-
+}
 
 /*A Million Dreams*/
 .dreams {
@@ -2034,6 +2034,7 @@ bedingung erfüllt ist
     grid-auto-rows: min-content;
     text-align: center;
     color: white;
+  }
   }
 
 /*Through where no one's been before*/
@@ -2235,6 +2236,7 @@ bedingung erfüllt ist
         text-shadow: 0 0 30px  rgba(230, 230, 230, 0.7);
 	}
 }
+}
 
 /*That's all it takes*/
 
@@ -2297,7 +2299,7 @@ bedingung erfüllt ist
   position: relative;
 }
 
-
+}
 /*Impressum*/
 
 h3 {
