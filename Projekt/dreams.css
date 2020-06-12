@@ -161,6 +161,159 @@ h1 {
 }
 }
 
+@media screen and (max-width: 40em) {
+/* hier drin sind css anweisungen, die bloss ausgeführt werden, falls
+bedingung erfüllt ist
+*/
+
+.start {
+  background: #141E30;
+  padding-top: 10rem;
+}
+
+.start_raster > * {
+
+}
+
+.start_raster {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content;
+  background: #141E30;
+  color: white;
+}
+
+.headtop img {
+  width: 40%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  animation-name: bewegen;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes bewegen {
+  0% {
+   left: 0;
+   transform: rotate(0deg);
+  }
+
+  25% {
+   top: 60%;
+   transform: rotate(180deg);
+  }
+
+  50% {
+   left: 80%;
+   transform: rotate(360deg);
+  }
+
+  75% {
+   top: 20%;
+   transform: rotate(180deg);
+  }
+
+  100% {
+   left: 30%;
+   transform: rotate(0deg);
+  }
+
+}
+
+.headbottom.isinview img  {
+  width: 40%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  padding-top: 2rem;
+
+  animation-name: dissapear;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-direction: alternate;
+  animation-delay: 5.5s;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes dissapear {
+  0% {
+   filter: blur(0);
+   opacity: 100%;
+  }
+
+  50% {
+   filter: blur(3rem);
+   opacity: 100%;
+  }
+
+  100% {
+    filter: blur(3rem);
+    opacity: 0;
+  }
+}
+
+
+.advice {
+  font-size: 1rem;
+  text-align: center;
+  z-index: 80;
+  opacity: 0;
+
+  animation-name: startdown;
+  transform-origin: 1s;
+  animation-duration: 1s;
+  animation-delay: 5.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.scrollit img {
+  animation-name: startdown;
+  width: 5%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 80;
+  opacity: 0;
+
+  animation-name: startdown;
+  transform-origin: 1s;
+  animation-duration: 1s;
+  animation-delay: 6s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes startdown {
+
+0% {
+  opacity: 100%;
+  top: 0;
+}
+
+100% {
+  opacity: 100%;
+  top: 30%;
+}
+}
+
+
 /* I close my Eyes */
 
 .close {
@@ -214,6 +367,64 @@ h1 {
   top: 50%;
 }
 }
+
+@media screen and (max-width: 40em) {
+/* hier drin sind css anweisungen, die bloss ausgeführt werden, falls
+bedingung erfüllt ist
+*/
+
+.close {
+  background: #141E30;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+
+}
+
+.close_raster > * {
+
+}
+
+.close_raster {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: repeat(3, 1fr);
+  background: #141E30;
+  color: white;
+}
+
+.eyes {
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 700;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  position: relative;
+
+}
+
+.eyes.animationdown.isinview {
+  animation-name: fadeoutdown;
+  transform-origin: 1s;
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: linear;
+  animation-fill-mode: forwards; 
+}
+
+@keyframes fadeoutdown {
+
+0% {
+  opacity: 100%;
+  top: 0;
+}
+
+100% {
+  opacity: 0%;
+  top: 50%;
+}
+}
+
 
 /* And I can see */
 
@@ -359,7 +570,152 @@ color: #141E30;
 }
 }
 
+@media screen and (max-width: 40em) {
+/* hier drin sind css anweisungen, die bloss ausgeführt werden, falls
+bedingung erfüllt ist
+*/
 
+.cansee {
+  padding-top: 16rem;
+  padding-bottom: 16rem;
+  color: white;
+}
+
+.cansee_raster > * {
+}
+
+.cansee_raster {
+  display: grid;
+  grid-template-areas:
+  ". and and and . "
+  ". can can can ."
+  ". see1 . see2 .";
+  grid-template-columns: 0.2fr 1fr 0.1fr 1fr 0.2fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  text-align: center;
+  font-weight: 700;
+}
+
+
+.checkview {
+  width: 100%;
+  transition: all 1s ease;
+  transition-delay: 0.5s;
+}
+
+
+.and {
+  font-size: 4rem;
+  grid-area: and;
+}
+
+.and.isinview {
+    animation-name: and_one;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes and_one {
+0% {
+color: white;
+filter: blur(1rem);
+}
+
+100% {
+  color: #141E30;
+  filter: blur(0);
+}
+}
+
+
+.can {
+  font-size: 4rem;
+  grid-area: can;
+}
+
+.can.isinview {
+    animation-name: can_one;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes can_one {
+0% {
+color: white;
+filter: blur(1rem);
+}
+
+100% {
+  color: #141E30;
+  filter: blur(0);
+}
+}
+
+.see1 {
+  font-size: 4rem;
+  text-align: right;
+  grid-area: see1;
+  color: white;
+}
+
+.see2 {
+  font-size: 4rem;
+  text-align: left;
+  grid-area: see2;
+  color: white;
+}
+
+.see1.isinview {
+    animation-name: see_one;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes see_one {
+0% {
+transform: rotateX(90deg);
+color: #EDEDF4;
+}
+
+100% {
+transform: rotateX(0deg);
+color: #141E30;
+}
+}
+
+.see2.isinview {
+    animation-name: see_two;
+    animation-duration: 1.5s;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes see_two {
+0% {
+transform: rotateX(90deg);
+color: #EDEDF4;
+}
+
+100% {
+transform: rotateX(0deg);
+color: #141E30;
+}
+}
 
 /* The World */
 .world {
@@ -555,7 +911,33 @@ color: #141E30;
 }
 
 
+@media screen and (max-width: 40em) {
+/* hier drin sind css anweisungen, die bloss ausgeführt werden, falls
+bedingung erfüllt ist
+*/
 
+
+.world {
+  color: #141E30;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 0.2;
+}
+
+.world_raster > * {
+
+}
+
+.world_raster {
+  display: block;
+  grid-template-areas:
+  " world1 world2 world3 world4 "
+  " world12 . . world5 ";
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.4fr 0.4fr 0.4fr 0.4fr;
+  background: #141E30;
+  padding: 1rem;
+}
 
 /* That's waiting up for me */
 
@@ -578,6 +960,29 @@ color: #141E30;
 
 }
 
+@media screen and (max-width: 40em) {
+/* hier drin sind css anweisungen, die bloss ausgeführt werden, falls
+bedingung erfüllt ist
+*/
+
+.waiting {
+}
+
+.waiting_raster > * {
+}
+
+.waiting_raster {
+  font-size: 3rem;
+  font-weight: 700;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, minmax(400px, 1fr));
+  color: #141E30;
+  text-align: center;
+  margin-top: 20rem;
+  font-weight: 700;
+
+}
 
 /*Through the… */
 
